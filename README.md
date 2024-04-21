@@ -1,1 +1,13 @@
-Repositorio para o trabalho de TI Front-End
+# Golpes Digitais
+
+O objetivo deste projeto é criar um site que ofereça recursos educacionais e ferramentas práticas para ajudar os idosos a identificar, evitar e lidar com golpes digitais. O site fornecerá informações claras e acessíveis sobre os diferentes tipos de golpes, bem como orientações sobre como se proteger online. Além disso, o site oferecerá suporte adicional, como fóruns de discussão e uma equipe de suporte dedicada, para ajudar os idosos a navegar pela internet com segurança.
+
+
+## Integrantes
+
+- Davi Puddo
+- Daniel Campos
+- Daniel Bueno
+- Matheus Costa
+- Enrico
+- Davi Mourão
