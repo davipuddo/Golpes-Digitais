@@ -11,3 +11,7 @@ O objetivo deste projeto é criar um site que ofereça recursos educacionais e f
 - Matheus Costa
 - Enrico
 - Davi Mourão
+
+## Instruções de utilização
+
+Assim que a primeira versão do sistema estiver disponível, deverá complementar com as instruções de utilização. Descreva como instalar eventuais dependências e como executar a aplicação.
