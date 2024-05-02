@@ -1,0 +1,13 @@
+
+:root
+{
+    --sitecolor: rgb(0,0,0); /*Cor principal do site (A ser decidido)*/
+}
+
+body, ul, li, p
+{
+    font-size: 24px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0px;
+    padding: 0px;
+}
