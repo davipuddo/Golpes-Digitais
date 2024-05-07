@@ -1,10 +1,10 @@
 
-:root
-{
-    --sitecolor: rgb(0,0,0); /*Cor principal do site (A ser decidido)*/
+:root {
+    --maincolor: #3873C4;
+    --secondaycolor: #75E189;
 }
 
-body, ul, li, p
+body, ul, li, p 
 {
     font-size: 24px;
     font-family: Arial, Helvetica, sans-serif;
