@@ -1,0 +1,17 @@
+{
+    "labels": [
+        "Falso pagamento",
+        "Invasão de contas",
+        "Anúncio falso",
+        "Outros"
+    ],
+    "datasets": [{
+        "data":[54, 22, 21, 3],
+        "backgroundColor": [
+            "lightblue",
+            "green",
+            "yellow",
+            "orange"
+        ]
+    }]          
+}
