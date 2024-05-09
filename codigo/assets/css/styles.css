@@ -1,13 +1,102 @@
 
-:root
-{
-    --sitecolor: rgb(0,0,0); /*Cor principal do site (A ser decidido)*/
+:root {
+    --maincolor: #3873C4;
+    --secondaycolor: #75E189;
 }
 
-body, ul, li, p
+body, ul, li, p 
 {
     font-size: 24px;
     font-family: Arial, Helvetica, sans-serif;
     margin: 0px;
     padding: 0px;
 }
+
+body
+{
+    height: 1fr;
+    background-color: var(--maincolor);
+}
+
+nav
+{
+    background-color: #eee;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+nav .Logomarca , nav section
+{
+    flex-wrap: wrap;
+    filter:drop-shadow(5px 5px 5px #999);
+}
+
+.Logomarca
+{
+    gap: 20px;
+    justify-content: left;
+    align-items: center;
+}
+
+#Logoname
+{
+    padding-top: 25px;
+}
+
+section
+{
+    display: grid;
+    gap: 20px;
+}
+
+
+input, button
+{
+    background-color: #ccc;
+    border: 2px solid #222;
+    border-radius: 4px;
+    padding: 5px 10px;
+    border-radius: 12px;
+}
+
+form button
+{
+    border-radius: 12px;
+}
+
+input
+{
+
+    width: 400px;
+}
+
+.Profile
+{
+    align-self: center;
+    justify-self: right;
+}
+
+.Profile button
+{ 
+    border-radius: 50px;
+    padding: 12px 15px;
+}
+
+.Profile .fa-user
+{
+    color: #1f1f1f;
+    filter: drop-shadow(5px 5px 5px #444);
+}
+
+.Search
+{
+    background-color: #3873C4;
+}
+
+button:hover
+{
+    background-color: #aaa;
+}
+
