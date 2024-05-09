@@ -17,8 +17,8 @@
     <header>
         <nav>
             <span class="Logomarca">
-                <img src="assets/images/Logomarca.png" alt="Logomarca" width="90" height="120">
-                <img id="Logoname" src="assets/images/Logomarca - Nome.png" alt="Logomarca" width="108" height="58">
+                <img src="assets/images/Logomarca.png" alt="Logomarca" width="70" height="90">
+                <img id="Logoname" src="assets/images/Logomarca - Nome.png" alt="Logomarca" width="96" height="48">
             </span>
             <section>
                 <span class="Profile">
@@ -32,11 +32,30 @@
         </nav>
     </header>
     <main>
-        <div>
-            
-        </div>
+        <section class="Editor">
+            <button type="menu"><i class="fa fa-arrow-left"></i></button>
+            <button type="menu"><i class="fa fa-arrow-right"></i></button>
+            <button type="menu"><i class="fa fa-align-left"></i></button>
+            <button type="menu"><i class="fa fa-align-center"></i></button>
+            <button type="menu"><i class="fa fa-align-right"></i></button>
+            <select name="Font-Size" id="Font-Size">
+                <option value="12">12px</option>
+                <option value="16">16px</option>
+                <option value="20">20px</option>
+                <option value="24">24px</option>
+                <option value="28">28px</option>
+                <option value="32">32px</option>
+                <option value="36">36px</option>
+            </select>
+            <select name="Font-Family" id="Font-Family">
+                <option value="Arial">Arial</option>
+                <option value="Calibri">Calibri</option>
+            </select>
+        </section>
+        <section>
+            <textarea name="editor" id="caixa-de-texto"></textarea>
+        </section>
     </main>
-
 </body>
 
 </html>

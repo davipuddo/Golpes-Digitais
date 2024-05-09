@@ -42,33 +42,25 @@ nav .Logomarca , nav section
 
 #Logoname
 {
-    padding-top: 25px;
+    padding-bottom:12px;
 }
 
-section
+nav section
 {
     display: grid;
     gap: 20px;
 }
 
-
-input, button
+nav input, nav button
 {
     background-color: #ccc;
     border: 2px solid #222;
-    border-radius: 4px;
+    border-radius: 8px;
     padding: 5px 10px;
-    border-radius: 12px;
-}
-
-form button
-{
-    border-radius: 12px;
 }
 
 input
 {
-
     width: 400px;
 }
 
@@ -90,13 +82,49 @@ input
     filter: drop-shadow(5px 5px 5px #444);
 }
 
-.Search
-{
-    background-color: #3873C4;
-}
-
 button:hover
 {
     background-color: #aaa;
 }
 
+main
+{
+    height: 200px;
+    padding: 40px 80px;
+}
+
+textarea
+{
+    display: block;
+    font: 13px;
+    font-family: Arial, Helvetica, sans-serif;
+    resize: none;
+    letter-spacing: 1px;
+    font-size: 0.8rem;
+    border-radius: 5px;
+    width: 100%;
+    border: 1px solid #ccc;
+    box-shadow: 5px 5px 5px #333;
+}
+
+.Editor
+{
+    justify-content: center;
+    padding: 4px 0px 20px 0px;
+    gap: 5px;
+    display: flex;
+}
+
+.Editor button, .Editor select
+{
+    padding: 5px 10px;
+    box-shadow:  3px 3px 3px #333;
+    border-radius: 5px;
+    border: 1px solid #1f1f1f;
+}
+
+.Editor select#Font-Family
+{
+    width: 120px;
+    background-color: #eee;
+}
