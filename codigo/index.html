@@ -10,9 +10,11 @@
 
     <!--stylesheets-->
     <link rel="stylesheet" href="assets/css/styles.css">
-    <script src="https://kit.fontawesome.com/13bad92f3e.js" crossorigin="anonymous"></script>
-</head>
 
+    <!--scripts-->
+    <script src="https://kit.fontawesome.com/13bad92f3e.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+</head>
 <body>
     <header>
         <nav>
@@ -37,7 +39,12 @@
             <button type="menu"><i class="fa fa-arrow-right"></i></button>
             <button type="menu"><i class="fa fa-align-left"></i></button>
             <button type="menu"><i class="fa fa-align-center"></i></button>
-            <button type="menu"><i class="fa fa-align-right"></i></button>
+            <button type="menu" onclick="sizeFunction()"><i class="fa fa-align-right"></i></button>
+            <script>
+                function myFunction() {
+  document.getElementById("demo").style.fontSize = "x-large";
+}
+            </script>
             <select name="Font-Size" id="Font-Size">
                 <option value="12">12px</option>
                 <option value="16">16px</option>
@@ -55,6 +62,7 @@
         <section>
             <textarea name="editor" id="caixa-de-texto"></textarea>
         </section>
+        <h1 id="demo">1</h1>
     </main>
 </body>
 
