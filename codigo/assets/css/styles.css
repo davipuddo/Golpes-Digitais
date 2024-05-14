@@ -1,4 +1,6 @@
 
+/* Definicoes gerais */
+
 :root {
     --maincolor: #3873C4;
     --secondaycolor: #75E189;
@@ -15,8 +17,10 @@ body, ul, li, p
 body
 {
     height: 1fr;
-    background-color: var(--maincolor);
+    background: radial-gradient(var(--maincolor), #1957ff);
 }
+
+/* Header */
 
 nav
 {
@@ -30,7 +34,7 @@ nav
 nav .Logomarca , nav section
 {
     flex-wrap: wrap;
-    filter:drop-shadow(5px 5px 5px #999);
+    filter:drop-shadow(3px 3px 6px #999);
 }
 
 .Logomarca
@@ -79,13 +83,15 @@ input
 .Profile .fa-user
 {
     color: #1f1f1f;
-    filter: drop-shadow(5px 5px 5px #444);
+    filter: drop-shadow(3px 3px 5px #444);
 }
 
 button:hover
 {
-    background-color: #aaa;
+    filter:brightness(90%)
 }
+
+/* Conteudo pricipal */
 
 main
 {
@@ -93,38 +99,83 @@ main
     padding: 40px 80px;
 }
 
-textarea
+.Page
 {
     display: block;
-    font: 13px;
-    font-family: Arial, Helvetica, sans-serif;
-    resize: none;
-    letter-spacing: 1px;
-    font-size: 0.8rem;
-    border-radius: 5px;
-    width: 100%;
-    border: 1px solid #ccc;
-    box-shadow: 5px 5px 5px #333;
 }
 
-.Editor
+/* Botoes da pagina*/
+
+#buttons
 {
-    justify-content: center;
-    padding: 4px 0px 20px 0px;
+    justify-content: space-between;
+    padding: 4px 15px 20px 15px;
     gap: 5px;
     display: flex;
 }
 
-.Editor button, .Editor select
+#buttons button
 {
+    align-self: center;
+    font-size: 20px;
     padding: 5px 10px;
-    box-shadow:  3px 3px 3px #333;
+    box-shadow:  2px 2px 6px #444;
     border-radius: 5px;
     border: 1px solid #1f1f1f;
 }
 
-.Editor select#Font-Family
+#buttons span
 {
-    width: 120px;
-    background-color: #eee;
+    grid-column: 1;
+    grid-row: 1;
+}
+
+#buttons button#save
+{
+    width: 111px;
+    background-color: var(--secondaycolor);
+}
+
+/* Caixas de texto */
+
+#Text
+{
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 0px;
+    height: 700px;
+}
+
+#markdownText
+{
+    word-break: break-all;
+    padding: 2px 8px;
+    background-color: #acacb3;
+    height: 200px;
+    font-family: Arial, Helvetica, sans-serif;
+    resize: none;
+    outline: none;
+    letter-spacing: 1px;
+    font-size: 12px;
+    border-radius: 8px 0 0 0px;
+    border: 1px solid #9e9e9e;
+    border-right: 2px solid #646464;
+    box-shadow: -5px 5px 9px #333;
+    width: 851px;
+    height: 713.5px;
+}
+
+#preview
+{
+    height: 713.5px;
+    width: 851px;
+    padding: 2px 8px;
+    border-radius: 0 8px 0px 0;
+    background-color: white;
+    border: 1px solid #ccc;
+    box-shadow: 5px 5px 9px #333;
+    white-space: pre-wrap;
+    word-break: break-all;
+    overflow-wrap: break-word;
+    overflow-y: auto;
 }
