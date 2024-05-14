@@ -14,5 +14,5 @@
     });
 
     upload.addEventListener("click", function(){
-        text.append.innerHTML = 123;
+
     })
