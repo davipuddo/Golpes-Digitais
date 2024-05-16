@@ -9,9 +9,11 @@
     <meta name="description" content="Como se prevenir de golpes digitais">
 
     <!--stylesheets-->
-    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/main.css"> 
+    <link rel="stylesheet" href="assets/css/chart.css">
 
     <!--scripts-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
     <script src="https://kit.fontawesome.com/13bad92f3e.js" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js"></script>
 </head>
@@ -34,10 +36,10 @@
         </nav>
     </header>
     <main>
-    </div>
-</main>
+        <div class="chart"><section><canvas id="piechart" style="max-width:600px"></canvas></section></div>
+    </main>
 </body>
-                <!--scripts-->
+<script src="assets/js/chart.js"></script>
 <script>
     // Forma primitiva de navegacao entre o editor e pagina principal
     document.querySelector("#PIcon").addEventListener("click", function(){

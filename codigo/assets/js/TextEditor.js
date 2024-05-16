@@ -27,6 +27,8 @@
                 let textVal = text.value;
                 let textArray = Jtext.val().split("\n");
                 let arquivo = new Blob([ textVal ], { type: 'text/plain' });
+                if (textArray[0] == "")
+                {textArray[0] = "IDS - Document";}
                 let fileName = textArray[0];
                 var dLink = document.createElement("a");
                 dLink.download = fileName;
