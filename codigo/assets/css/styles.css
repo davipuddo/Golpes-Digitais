@@ -108,7 +108,7 @@ main
 
 #buttons
 {
-    justify-content: space-between;
+    justify-content: right;
     padding: 4px 15px 20px 15px;
     gap: 5px;
     display: flex;
@@ -122,12 +122,6 @@ main
     box-shadow:  2px 2px 6px #444;
     border-radius: 5px;
     border: 1px solid #1f1f1f;
-}
-
-#buttons span
-{
-    grid-column: 1;
-    grid-row: 1;
 }
 
 #buttons button#save
@@ -170,12 +164,12 @@ main
     height: 713.5px;
     width: 851px;
     padding: 2px 8px;
+    white-space: pre-wrap;
+    word-break: break-all;
     border-radius: 0 8px 0px 0;
     background-color: white;
     border: 1px solid #ccc;
     box-shadow: 5px 5px 9px #333;
-    white-space: pre-wrap;
-    word-break: break-all;
     overflow-wrap: break-word;
     overflow-y: auto;
 }
