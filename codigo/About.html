@@ -30,20 +30,31 @@
                 </span>
                 <form action="index.html" class="Searchbar">
                     <input type="text" placeholder="Pesquise aqui!" name="search">
-                    <button type="submit"><i class="fa fa-search"></i></button>
+                    <button type="submit" id="search"><i class="fa fa-search"></i></button>
                 </form>
             </section>
         </nav>
     </header>
     <main>
-        <div class="chart"><section><canvas id="piechart" style="max-width:300px"></canvas></section></div>
+        <div id="chart">
+            <section>
+                <canvas id="piechart"></canvas>
+            </section>
+        </div>
+        <div id="data">
+            <section>
+                <p id="title">Em 2023: </h1>
+                <p id="money">22.9 Bilhões de reais</p>
+                <p>Foram perdidos apenas por golpes de investimento falso. </p>
+            </section>
+        </div>
     </main>
 </body>
-<script src="assets/js/chart.js"></script>
 <script>
-    // Forma primitiva de navegacao entre o editor e pagina principal
+    // Forma primitiva de navegacao entre o editor e os graficos
     document.querySelector("#PIcon").addEventListener("click", function(){
-    window.location.href = "TextEditor.html";
+        window.location.href = "TextEditor.html";
     });
 </script>
+<script src="assets/js/about.js"></script>
 </html>

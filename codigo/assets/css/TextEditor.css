@@ -1,5 +1,10 @@
 /* Caixas de texto */
 
+.Page
+{
+    display: block;
+}
+
 #Text
 {
     display: flex;
@@ -10,10 +15,10 @@
 
 #markdownText
 {
-    word-break: break-all;
-    padding: 2px 8px;
+    width: 851px;
+    height: 100%;
+    padding: 2px 6px;
     background-color: #e0e0e0;
-    height: 200px;
     font-family: Arial, Helvetica, sans-serif;
     resize: none;
     outline: none;
@@ -23,15 +28,13 @@
     border: 2px solid #171242;
     border-right: 2px solid #646464;
     box-shadow: -5px 5px 9px #333;
-    width: 851px;
-    height: 713.5px;
 }
 
 #preview
 {
-    height: 713.5px;
+    height: 100%;
     width: 851px;
-    padding: 2px 8px;
+    padding: 2px 6px;
     white-space: pre-wrap;
     word-break: break-all;
     border-radius: 0 8px 0px 0;

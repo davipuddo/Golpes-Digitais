@@ -95,11 +95,8 @@ button:hover
 
 main
 {
+    display: block;
     height: 200px;
     padding: 40px 80px;
 }
 
-.Page
-{
-    display: block;
-}

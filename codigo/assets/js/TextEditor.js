@@ -6,6 +6,7 @@
 
         // Converter valores do textarea para markdown e mostra-los ao lado
         function UpdatePreview (){
+
             // Conversao para Markdown
             const markdown = marked.parse(text.value);
 
@@ -37,18 +38,29 @@
                 alert("O documento nao pode ser salvo vazio. ");
             }
             else
-            {
+            {   
+                let Mtitle  = null;
                 let textVal = text.value;
-                let textStr = Jtext.val().split("\n");
-                let DocTitle = textStr[0];
+
+                // Definir o titulo
+                if (document.querySelector("#preview h1") == null)
+                {
+                    Mtitle = "untitled";
+                }
+                else
+                {
+                    Mtitle = document.querySelector("#preview h1").innerHTML;
+                }
+
+                // Dados
                 let Docs = {
-                        title: DocTitle,
+                        title: Mtitle,
                         Date: CurrentDate(),
                         text: textVal
                     };
+                // Salvar dados
                 localStorage.setItem(Docs.title, JSON.stringify(Docs));
-                console.log(Docs);
-                alert("Documento salvo");
+                alert("Documento salvo. ");
             }
         };
         

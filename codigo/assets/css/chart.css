@@ -1,11 +1,13 @@
-.chart
+#chart
 {
+    width: 100%;
     display: flex;
-    justify-content: right;
+    justify-content: center;
 }
 
-.chart section
+#chart section
 {
+    height: 250px;
     padding: 20px;
     border-radius: 12px;
     border: 3px solid #222;
@@ -15,5 +17,45 @@
 
 #piechart
 {
+    width: 500px;
+    max-width: 500px;
     color:aqua
+}
+
+#data
+{
+    width: 100%;
+    padding-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+#data section
+{
+    height: 250px;
+    width: 500px;
+    padding: 20px;
+    border-radius: 12px;
+    border: 3px solid #222;
+    box-shadow: 5px 5px 5px #333;
+    background-color: white;
+}
+
+
+#data p
+{
+    filter: drop-shadow(1px 1px 1px #999);
+}
+
+#data p#title
+{
+    font-size: 34px;
+}
+
+#data p#money
+{
+    font-size: 32px;
+    filter: drop-shadow(1px 1px 1px #a85e5e);
+    color: red;
+    padding: 40px 0px 40px 0px;
 }
