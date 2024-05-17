@@ -3,7 +3,6 @@
         const Jtext = $("#markdownText");
         const text = document.querySelector("#markdownText");
         const preview = document.querySelector("#preview");
-        
 
         // Converter valores do textarea para markdown e mostra-los ao lado
         function UpdatePreview (){
@@ -15,45 +14,46 @@
                 {USE_PROFILES: {html: true}});
         };
         
-        // Caixa de texto
-        text.addEventListener("input", function(){
-            UpdatePreview ();
-        });
+        // Atualizar caixa de texto ao digitar
+        text.addEventListener("input", UpdatePreview);
 
-        // Salvar como arquivo txt
-        document.querySelector("#save").addEventListener("click", function(){
-            if (text.value != "")
+        // Descobrir a data
+        function CurrentDate()
+        {
+            let date = new Date().toLocaleDateString();
+            for (let i = 0; i < date.length; i++)
             {
-                let textVal = text.value;
-                let textArray = Jtext.val().split("\n");
-                let arquivo = new Blob([ textVal ], { type: 'text/plain' });
-                if (textArray[0] == "")
-                {textArray[0] = "IDS - Document";}
-                let fileName = textArray[0];
-                var dLink = document.createElement("a");
-                dLink.download = fileName;
-                if (window.webkitURL != null) 
-                {
-                    // Chrome
-                    dLink.href = window.webkitURL.createObjectURL(arquivo);
-                } 
-                else 
-                {
-                    // Firefox
-                    dLink.href = window.URL.createObjectURL(arquivo);
-                    dLink.onclick = dLink.remove();
-                    dLink.style.display = "none";
-                    document.body.appendChild(dLink);
-                }
-                dLink.click();
+                date = date.replace("/", "-");
+            }
+            return (date);
+        }
+
+        // Salvar texto no localStorage
+        function SaveText ()
+        {   
+            // Se o documento estiver em branco
+            if (text.value == "")
+            {
+                alert("O documento nao pode ser salvo vazio. ");
             }
             else
             {
-                alert("O arquivo nao pode ser baixado vazio. ");
+                let textVal = text.value;
+                let textStr = Jtext.val().split("\n");
+                let DocTitle = textStr[0];
+                let Docs = {
+                        title: DocTitle,
+                        Date: CurrentDate(),
+                        text: textVal
+                    };
+                localStorage.setItem(Docs.title, JSON.stringify(Docs));
+                console.log(Docs);
+                alert("Documento salvo");
             }
-        })  
+        };
+        
+        // Botao de salvar
+        document.querySelector("#save").addEventListener("click", SaveText);
 
-        // Forma primitiva de navegacao entre o editor e pagina principal
-        profile.addEventListener("click", function(){
-            window.location.href = "index.html";
-        });
+        // Botao de upload
+        //document.querySelector("#upload").addEventListener("click", );
