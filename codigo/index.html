@@ -3,19 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
     <title>Idoso Seguro</title>
-
     <meta name="description" content="Como se prevenir de golpes digitais">
 
     <!--stylesheets-->
-    <link rel="stylesheet" href="assets/css/main.css"> 
-    <link rel="stylesheet" href="assets/css/chart.css">
+    <link rel="stylesheet" href="assets/css/main.css">
 
     <!--scripts-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
     <script src="https://kit.fontawesome.com/13bad92f3e.js" crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js"></script>
 </head>
 <body>
     <header>
@@ -30,32 +25,29 @@
                 </span>
                 <form action="index.html" class="Searchbar">
                     <input type="text" placeholder="Pesquise aqui!" name="search">
-                    <button type="submit" id="search"><i class="fa fa-search"></i></button>
+                    <button type="submit"><i class="fa fa-search"></i></button>
                 </form>
             </section>
         </nav>
     </header>
     <main>
-        <div id="chart">
-            <section>
-                <canvas id="piechart"></canvas>
-            </section>
-        </div>
-        <div id="data">
-            <section>
-                <p id="title">Em 2023: </h1>
-                <p id="money">22.9 Bilhões de reais</p>
-                <p>Foram perdidos apenas por golpes de investimento falso. </p>
-            </section>
-        </div>
+        <section id="EditBTN">
+            <button><i class="fa-solid fa-plus" id="Edit"></i></button>
+        </section>
+            <div id="cardbox">
+    
+            </div>
     </main>
 </body>
+                            <!--scripts-->
+<script src="assets/js/main.js"></script>
 <script>
     // Forma primitiva de navegacao entre o editor e os graficos
-    document.querySelector("#PIcon").addEventListener("click", function(){
+    document.querySelector("#Edit").addEventListener("click", function(){
         window.location.href = "TextEditor.html";
-    });
+        });
+        document.addEventListener("DOMContentLoaded", Cards);
+        
 </script>
-<script src="assets/js/about.js"></script>
-<script src="assets/js/main.js"></script>
+                
 </html>

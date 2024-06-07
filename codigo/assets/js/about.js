@@ -34,16 +34,16 @@
               };
           new Chart("piechart", data);
           var money = document.querySelector("#money");
-
+          var target = 22.9;
           let x = 0;
           var interval = setInterval(function(){
-            if (x < 22.9 && x < 22)
+            if (x < target && x < 22)
             {x += 1}
-            if (x >= 22 && x < 22.9)
+            if (x >= 22 && x < target)
             { x += 0.3}
-            if (x > 22.9)
-            {x = 22.9}
-            if (x == 22.9)
+            if (x > target)
+            {x = target}
+            if (x == target)
             {
                 clearInterval(interval)
             };

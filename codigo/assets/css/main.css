@@ -3,6 +3,7 @@
 
 :root {
     --maincolor: #3873C4;
+    --Bmaincolor: #36b4ee;
     --secondaycolor: #75E189;
 }
 
@@ -12,6 +13,11 @@ body, ul, li, p
     font-family: Arial, Helvetica, sans-serif;
     margin: 0px;
     padding: 0px;
+}
+
+button
+{
+    cursor: pointer !important;
 }
 
 body
@@ -63,6 +69,13 @@ nav input, nav button
     padding: 5px 10px;
 }
 
+nav button#Logomarca
+{
+    background-color: inherit;
+    border: 0px;
+    border-radius: 0;
+}
+
 input
 {
     width: 400px;
@@ -86,7 +99,7 @@ input
     filter: drop-shadow(3px 3px 5px #444);
 }
 
-button:hover
+button:hover:not(#Logomarca)
 {
     filter:brightness(90%)
 }
@@ -98,5 +111,56 @@ main
     display: block;
     height: 200px;
     padding: 40px 80px;
+}
+
+main section#EditBTN
+{
+    padding-left: 98%;
+}
+
+main section button
+{
+    background-color: #ccc;
+    border: 2px solid #222;
+    border-radius: 8px;
+    padding: 5px 10px;
+}
+
+div#cardbox
+{
+    margin: 10px 200px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 90px 10px;
+}
+
+div.card
+{
+    display: flex;
+    flex-wrap: wrap;
+    overflow-wrap: break-word;
+    overflow-y: auto;
+    border-radius: 12px;
+    border: 2px solid #222;
+    padding: 0px 12px;
+    background-color: white;
+    filter:drop-shadow(3px 3px 4px #333);
+    justify-content: right;
+}
+
+
+div.card h3
+{
+    width: 100%;
+}
+
+div.card button
+{
+    font-size: 18px;
+    text-decoration: none;
+    background-color: var(--Bmaincolor);
+    border: 2px solid #222;
+    border-radius: 8px;
+    padding: 5px 10px;
 }
 

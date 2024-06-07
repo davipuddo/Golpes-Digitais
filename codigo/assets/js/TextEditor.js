@@ -3,6 +3,7 @@
         const Jtext = $("#markdownText");
         const text = document.querySelector("#markdownText");
         const preview = document.querySelector("#preview");
+        var   keyname;
 
         // Converter valores do textarea para markdown e mostra-los ao lado
         function UpdatePreview (){
@@ -32,6 +33,8 @@
         // Salvar texto no localStorage
         function SaveText ()
         {   
+            var N = 0;
+            var Docs = [];
             // Se o documento estiver em branco
             if (text.value == "")
             {
@@ -52,20 +55,38 @@
                     Mtitle = document.querySelector("#preview h1").innerHTML;
                 }
 
-                // Dados
-                let Docs = {
-                        title: Mtitle,
-                        Date: CurrentDate(),
-                        text: textVal
-                    };
+                // Copiar dados antigos
+                if (JSON.parse(localStorage.getItem('db')))
+                {
+                    Docs = JSON.parse(localStorage.getItem('db'));
+                    N = (Docs.length);
+                }
+
+                // Objeto com dados atuais
+                obj = {
+                    title: Mtitle,
+                    Date: CurrentDate(),
+                    text: textVal,
+                    N: N
+                };
+
+                // Guardar todos os dados no array
+                Docs.push(obj);
+
                 // Salvar dados
-                localStorage.setItem(Docs.title, JSON.stringify(Docs));
+                localStorage.setItem("db", JSON.stringify(Docs));   
                 alert("Documento salvo. ");
             }
+            return(Docs.title);
         };
+
+        function ShowText()
+        {
+            data = JSON.parse(localStorage.getItem("db")).text;
+            text.value = data
+        }
         
         // Botao de salvar
-        document.querySelector("#save").addEventListener("click", SaveText);
-
-        // Botao de upload
-        //document.querySelector("#upload").addEventListener("click", );
+        document.querySelector("#save").addEventListener("click", function(){
+            keyname = SaveText();
+        });
