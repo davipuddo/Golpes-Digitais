@@ -31,8 +31,9 @@
         </nav>
     </header>
     <main>
-        <section id="EditBTN">
+        <section id="btn">
             <button><i class="fa-solid fa-plus" id="Edit"></i></button>
+            <button><i class="fa-solid fa-eraser" id="Delete"></i></button>
         </section>
             <div id="cardbox">
     
@@ -42,10 +43,12 @@
                             <!--scripts-->
 <script src="assets/js/main.js"></script>
 <script>
+    
     // Forma primitiva de navegacao entre o editor e os graficos
     document.querySelector("#Edit").addEventListener("click", function(){
         window.location.href = "TextEditor.html";
         });
+
         document.addEventListener("DOMContentLoaded", Cards);
         
 </script>

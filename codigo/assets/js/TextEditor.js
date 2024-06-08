@@ -43,16 +43,27 @@
             else
             {   
                 let Mtitle  = null;
+                let Stitle = null;
                 let textVal = text.value;
 
                 // Definir o titulo
                 if (document.querySelector("#preview h1") == null)
                 {
-                    Mtitle = "untitled";
+                    Mtitle = "Untitled";
                 }
                 else
                 {
                     Mtitle = document.querySelector("#preview h1").innerHTML;
+                }
+
+                // Definir o subtitulo
+                if (document.querySelector("#preview h3") == null)
+                {
+                    Stitle = "No Subtitle";
+                }
+                else
+                {
+                    Stitle = document.querySelector("#preview h3").innerHTML;
                 }
 
                 // Copiar dados antigos
@@ -65,7 +76,8 @@
                 // Objeto com dados atuais
                 obj = {
                     title: Mtitle,
-                    Date: CurrentDate(),
+                    subtitle: Stitle,
+                    date: CurrentDate(),
                     text: textVal,
                     N: N
                 };

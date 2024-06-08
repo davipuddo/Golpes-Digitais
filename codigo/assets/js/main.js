@@ -12,17 +12,19 @@ function Cards()
     var data = JSON.parse(localStorage.getItem('db'));
     var TN = data.length
     console.log(TN);
-    
-    CardArea.innerHTML = `<div class="card" style="width: 22rem; height: 12rem">
-                              <h3 class="card-title">${data[0].title}</h3>
-                              <a href="#" class="btn btn-primary"><button>Visitar</button></a>
-                          </div>`
-
-    for (let i = 1; i < TN; i++)
+    for (let i = 0; i < TN; i++)
     {
-        CardArea.innerHTML += `<div class="card" style="width: 22rem; height: 12rem">
+        CardArea.innerHTML += `<div class="card" style="width: 28rem; height: 18rem">
+                                <div class="text">
                                    <h3 class="card-title">${data[i].title}</h3>
-                                   <a href="#" class="btn btn-primary"><button>Visitar</button></a>
+                                   <p class="card-subtitle">${data[i].subtitle}</p>
+                                </div>
+                                   <button id="${i}">Visitar</button>
                                </div>`
     }
 }
+
+document.querySelector("#Delete").addEventListener("click", function(){
+    localStorage.removeItem('db');
+    location.reload();
+})

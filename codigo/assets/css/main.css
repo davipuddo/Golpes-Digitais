@@ -101,37 +101,45 @@ input
 
 button:hover:not(#Logomarca)
 {
-    filter:brightness(90%)
+    filter:brightness(90%);
 }
 
 /* Conteudo pricipal */
 
 main
 {
-    display: block;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     height: 200px;
     padding: 40px 80px;
 }
 
-main section#EditBTN
+main section#btn
 {
+    display: flex;
     padding-left: 98%;
+    gap: 12px;
+    filter:drop-shadow(2px 2px 2px #444);
 }
 
 main section button
 {
-    background-color: #ccc;
+    display: flex;
+    justify-content: center;
+    width: 40px;
+    height: 35px;
+    background-color: white;
     border: 2px solid #222;
     border-radius: 8px;
-    padding: 5px 10px;
+    padding: 7px 10px;
 }
 
 div#cardbox
 {
-    margin: 10px 200px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 90px 10px;
+    gap: 90px 40px;
 }
 
 div.card
@@ -142,25 +150,37 @@ div.card
     overflow-y: auto;
     border-radius: 12px;
     border: 2px solid #222;
-    padding: 0px 12px;
+    padding: 0px 18px;
     background-color: white;
     filter:drop-shadow(3px 3px 4px #333);
-    justify-content: right;
+    align-items: flex-end;
 }
 
 
 div.card h3
 {
+    position: relative;
+    align-self: flex-start;
     width: 100%;
+}
+
+div.text 
+{
+    align-self: start;
 }
 
 div.card button
 {
+    position: absolute;
+    right: 0;
+    align-self: flex-end;
+    margin: 20px 20px;
     font-size: 18px;
     text-decoration: none;
     background-color: var(--Bmaincolor);
+    filter:drop-shadow(2px 2px 2px #444);
     border: 2px solid #222;
-    border-radius: 8px;
-    padding: 5px 10px;
+    border-radius: 10px;
+    padding: 10px 12px;
 }
 
