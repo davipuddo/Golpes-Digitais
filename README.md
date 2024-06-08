@@ -5,12 +5,13 @@ O objetivo deste projeto é criar um site que ofereça recursos educacionais e f
 
 ## Integrantes
 
-- Davi Puddo
-- Daniel Campos
+- Davi Ferreira Puddo
+- Daniel Campos Lacerda
 - Daniel Bueno
 - Matheus Costa
-- Enrico
+- Enrico Rolim Couto
 - Davi Mourão
+- Matheus Felipe Cavalcanti
 
 ## Instruções de utilização
 
