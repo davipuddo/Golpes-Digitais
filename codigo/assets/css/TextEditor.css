@@ -15,7 +15,7 @@
 
 #markdownText
 {
-    width: 851px;
+    width: 40vw;
     height: 100%;
     padding: 2px 6px;
     background-color: #e0e0e0;
@@ -32,8 +32,8 @@
 
 #preview
 {
+    width: 40vw;
     height: 100%;
-    width: 851px;
     padding: 2px 6px;
     white-space: pre-wrap;
     word-break: break-all;
@@ -69,4 +69,12 @@
 {
     width: 111px;
     background-color: var(--secondaycolor);
+}
+
+@media screen and (max-width:800px)
+{
+    *
+    {
+        display: none;
+    }
 }

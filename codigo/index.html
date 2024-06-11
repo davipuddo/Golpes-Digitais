@@ -39,17 +39,19 @@
     
             </div>
     </main>
+    <footer>
+        <button id="About">?</button>
+    </footer>
 </body>
                             <!--scripts-->
 <script src="assets/js/main.js"></script>
 <script>
-    
-    // Forma primitiva de navegacao entre o editor e os graficos
-    document.querySelector("#Edit").addEventListener("click", function(){
-        window.location.href = "TextEditor.html";
-        });
 
-        document.addEventListener("DOMContentLoaded", Cards);
+        // Criar cards
+        if (localStorage.getItem('db'))
+        {
+            document.addEventListener("DOMContentLoaded", Cards);
+        }
         
 </script>
                 

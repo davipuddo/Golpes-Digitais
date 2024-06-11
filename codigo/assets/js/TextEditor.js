@@ -3,7 +3,24 @@
         const Jtext = $("#markdownText");
         const text = document.querySelector("#markdownText");
         const preview = document.querySelector("#preview");
+        const logo = document.querySelector("#Logomarca");
         var   keyname;
+
+        // Home button
+        logo.addEventListener("click", function(){
+            window.location.href = "index.html";
+        })
+
+        // Responsividade
+        var Rcheck = true;
+        if (window.matchMedia("(max-width:800px)").matches)
+        {
+            if (Rcheck === true)
+            {
+                alert("Resolucao nao suportada. ");
+                Rcheck = false;
+            }
+        }
 
         // Converter valores do textarea para markdown e mostra-los ao lado
         function UpdatePreview (){

@@ -1,17 +1,28 @@
 
 const logo = document.querySelector("#Logomarca");
 const CardArea = document.querySelector("main div");
+const Editor = document.querySelector("#Edit");
+const About = document.querySelector("#About");
 var NQ = 0;
 
+// Ir para homepage
 logo.addEventListener("click", function(){
     window.location.href = "index.html";
+})
+
+//
+Editor.addEventListener("click", function(){
+    window.location.href = "TextEditor.html";
+    });
+
+About.addEventListener("click", function(){
+    window.location.href = "About.html";
 })
 
 function Cards()
 {
     var data = JSON.parse(localStorage.getItem('db'));
     var TN = data.length
-    console.log(TN);
     for (let i = 0; i < TN; i++)
     {
         CardArea.innerHTML += `<div class="card" style="width: 28rem; height: 18rem">
