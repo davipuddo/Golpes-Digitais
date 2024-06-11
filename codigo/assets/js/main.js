@@ -1,4 +1,5 @@
 
+// Constantes
 const logo = document.querySelector("#Logomarca");
 const CardArea = document.querySelector("main div");
 const Editor = document.querySelector("#Edit");

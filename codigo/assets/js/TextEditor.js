@@ -12,14 +12,10 @@
         })
 
         // Responsividade
-        var Rcheck = true;
         if (window.matchMedia("(max-width:800px)").matches)
         {
-            if (Rcheck === true)
-            {
-                alert("Resolucao nao suportada. ");
-                Rcheck = false;
-            }
+                alert("Resolucao nao suportada.");
+                window.location.href = "index.html";
         }
 
         // Converter valores do textarea para markdown e mostra-los ao lado

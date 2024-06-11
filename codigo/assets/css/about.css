@@ -20,6 +20,12 @@
 {
     align-self: flex-end;
     justify-self: end;
+    font-size: 18px;
+    text-decoration: none;
+    background-color: var(--Bmaincolor);
+    filter:drop-shadow(2px 2px 2px #444);
+    border: 2px solid #222;
+    border-radius: 10px;
 }
 
 #piechart
@@ -104,6 +110,15 @@
         display: block;
         width: 90%;
     }
+}
+
+@media screen and (max-width:620px)
+{
+    #chart button
+    {
+        display: none;
+    }
+    
 }
 
 @media screen and (max-width:510px)
