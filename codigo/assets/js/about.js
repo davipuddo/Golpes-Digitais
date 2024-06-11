@@ -1,6 +1,7 @@
 
             // Constantes
             const logo = document.querySelector("#Logomarca");
+            const money = document.querySelector("#money");
 
             // Home button
             logo.addEventListener("click", function(){
@@ -55,7 +56,6 @@
           new Chart("piechart", data);
 
           // Apresentar numero de reais perdidos
-          var money = document.querySelector("#money");
           var target = 22.9;
           let x = 0;
           var interval = setInterval(function(){
