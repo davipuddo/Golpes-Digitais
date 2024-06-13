@@ -90,7 +90,7 @@ var Tsize = 26;
 
 // Controlar responsividade do grafico          
 // NOTA : Usar F5 para atualizar o grafico apos alteracao da resolucao da pagina
-if (window.matchMedia("(max-width:500px").matches)
+if (window.matchMedia("(max-width:500px)").matches)
 {
   Tsize = 18;
 }
