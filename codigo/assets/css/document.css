@@ -1,0 +1,24 @@
+/* Caixas de texto */
+
+#page
+{
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 0px;
+    height: calc(100vh - 220px);
+}
+
+#doc
+{
+    scrollbar-width: none;
+    width: 85vw;
+    height: 100%;
+    padding: 2px 16px;
+    white-space: pre-wrap;
+    border-radius: 8px 8px 0px 0px;
+    background-color: white;
+    border: 2px solid #171242;
+    box-shadow: 5px 5px 9px #333;
+    overflow-wrap: break-word;
+    overflow-y: auto;
+}
