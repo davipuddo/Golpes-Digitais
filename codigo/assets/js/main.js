@@ -63,12 +63,12 @@ if (CardsReady)
     for (let i = 0; i < Docs.length; i++)
     {
             Docs[i].addEventListener("click", function(){
+                
+                // Criar link para a pagina
                 let link = window.location.origin + '/codigo/document.html';
                 let url = new URL(link);
-                url.searchParams.append('n', i);
-                let modifiedUrl = url.toString();
-                window.location.href = modifiedUrl
-                delete(url);
+                url.searchParams.append('N', i);
+                window.location.href = url.toString();
             })
     }
 
@@ -79,9 +79,9 @@ if (CardsReady)
         searchInput.addEventListener('input', function () {
           const searchTerm = this.value.toLowerCase();
     
-          const animalCards = document.querySelectorAll('.card');
+          const Cards = document.querySelectorAll('.card');
     
-          animalCards.forEach(function (card) {
+          Cards.forEach(function (card) {
             const titulo = card.querySelector('h3:first-of-type').textContent.toLowerCase();
     
             if (titulo.includes(searchTerm)) {
