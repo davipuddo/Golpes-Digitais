@@ -1,43 +1,49 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
     <title>Idoso Seguro</title>
-
     <meta name="description" content="Como se prevenir de golpes digitais">
 
     <!--stylesheets-->
-    <link rel="stylesheet" href="assets/css/styles.css">
-    
+    <link rel="stylesheet" href="assets/css/main.css">
+
     <!--scripts-->
     <script src="https://kit.fontawesome.com/13bad92f3e.js" crossorigin="anonymous"></script>
-
 </head>
 <body>
     <header>
         <nav>
             <span class="Logomarca">
-                <img src="assets/images/Logomarca.png" alt="Logomarca" width="90" height="120">
-                <img id="Logoname" src="assets/images/Logomarca - Nome.png" alt="Logomarca" width="108" height="58">
+                <button id="Logomarca"><img src="assets/images/Logomarca.png" alt="Logomarca" width="70" height="90">
+                <img id="Logoname" src="assets/images/Logomarca - Nome.png" alt="Logomarca" width="96" height="43"></button>
             </span>
             <section>
                 <span class="Profile">
-                    <button type="button"><i class="fa fa-user fa-2x"></i></button>
+                    <button type="submit" id="PIcon"><i class="fa fa-user fa-2x"></i></button>
                 </span>
                 <form action="index.html" class="Searchbar">
-                    <input type="text" placeholder="Pesquise aqui!" name="search">
-                    <button type="submit"><i class="fa fa-search"></i></button>
+                    <input type="text" id="searchInput" placeholder="Pesquise aqui!" name="search">
                 </form>
             </section>
         </nav>
     </header>
     <main>
-        <div>
-            
-        </div>
+        <section id="btn">
+            <button id="Edit"><i class="fa-solid fa-plus"></i></button>
+            <button id="Delete"><i class="fa-solid fa-eraser"></i></button>
+        </section>
+            <div id="cardbox">
+    
+            </div>
     </main>
+    <footer>
+        <button id="About">?</button>
+    </footer>
 </body>
-
+                            <!--scripts-->
+<script src="assets/js/main.js"></script>
+<script>
+</script>
 </html>
