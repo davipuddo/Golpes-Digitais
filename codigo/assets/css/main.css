@@ -127,7 +127,7 @@ main section#btn
 main section button
 {
     display: flex;
-    justify-content: center;
+    justify-content:center;
     width: 40px;
     height: 35px;
     background-color: white;
@@ -139,12 +139,16 @@ main section button
 div#cardbox
 {
     display: grid;
+    flex-wrap: wrap;
     grid-template-columns: repeat(3, 1fr);
     gap: 90px 40px;
+    padding-top: 10px;
 }
 
 div.card
 {
+    width: 20vw;
+    height: 25vh;
     display: flex;
     flex-wrap: wrap;
     overflow-wrap: break-word;
@@ -206,14 +210,52 @@ footer button
     border-radius: 8px;
 }
 
+@media screen and (max-width: 1500px) 
+{
+    div#cardbox
+    {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    div.card
+    {
+        width: 40vw;
+        height: 32vh;
+    }
+}
+
+@media screen and (max-width: 1400px) 
+{
+    div#cardbox
+    {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
 
 @media screen and (max-width:1200px)
 {
+
     nav input
     {
-        
         width: fit-content;
     }
+}
+
+@media screen and (max-width: 1000px) and (max-height: 450px) 
+{
+    div.card
+    {
+        height: 60vh;
+    }
+}
+
+@media screen and (max-width:800px) 
+{
+    div.card
+    {
+        width: 70vw;
+        height: 32vh;
+    }   
 }
 
 @media screen and (max-width:510px)
@@ -245,5 +287,42 @@ footer button
         padding-bottom: 0px;
         height: 35px !important;
         width: 70px !important;
+    }
+}
+
+@media screen and (max-width:1200px) and (min-height: 1400px)
+{
+
+    #btn button
+    {
+        padding: 16px 30px 45px 30px;
+        font-size: 35px;
+    }
+
+    div.card
+    {
+        width: 50vh;
+        height: 20vh;
+    }
+
+    div.card h3
+    {
+        font-size: 44px;
+    }
+
+    div.card p
+    {
+        font-size: 42px;
+    }
+
+    div.card button
+    {
+        font-size: 44px;
+    }
+
+    button#About
+    {
+        padding: 5px 15px;
+        font-size: 35px;
     }
 }
