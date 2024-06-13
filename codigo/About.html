@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Idoso Seguro</title>
+
+    <meta name="description" content="Como se prevenir de golpes digitais">
+
+    <!--stylesheets-->
+    <link rel="stylesheet" href="assets/css/main.css"> 
+    <link rel="stylesheet" href="assets/css/about.css">
+
+    <!--scripts-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+    <script src="https://kit.fontawesome.com/13bad92f3e.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <span class="Logomarca">
+                <button id="Logomarca"><img src="assets/images/Logomarca.png" alt="Logomarca" width="70" height="90">
+                <img id="Logoname" src="assets/images/Logomarca - Nome.png" alt="Logomarca" width="96" height="43"></button>
+            </span>
+            <section>
+                <span class="Profile">
+                    <button type="submit" id="PIcon"><i class="fa fa-user fa-2x"></i></button>
+                </span>
+                <form action="index.html" class="Searchbar">
+                    <input type="text" placeholder="Pesquise aqui!" name="search">
+                    <button type="submit" id="search"><i class="fa fa-search"></i></button>
+                </form>
+            </section>
+        </nav>
+    </header>
+    <main>
+        <div id="chart">
+            <section>
+                <canvas id="piechart"></canvas>
+                <button id="EditPie" title="Editar gráfico"><i class="fa-solid fa-pen-to-square"></i></button>
+            </section>
+        </div>
+        <div id="data">
+            <section>
+                <p id="title">Em 2023: </p>
+                <p id="money">22.9 Bilhões de reais</p>
+                <p>Foram perdidos apenas por golpes de investimento falso. </p>
+            </section>
+        </div>
+    </main>
+</body>
+<script src="assets/js/about.js"></script>
+</html>
