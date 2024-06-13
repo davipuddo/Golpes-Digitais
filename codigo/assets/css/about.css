@@ -32,7 +32,8 @@
 {
     width: 500px;
     max-width: 500px;
-    color:aqua
+    color:aqua;
+    margin-bottom: 24px;
 }
 
 #data
