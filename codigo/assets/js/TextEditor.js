@@ -14,8 +14,10 @@
         // Responsividade
         if (window.matchMedia("(max-width:800px)").matches)
         {
-                alert("Resolucao nao suportada.");
-                window.location.href = "index.html";
+                if (!confirm("Resolucao nao recomendada, deseja continuar?."))
+                {
+                    window.location.href = "index.html";
+                }
         }
 
         // Converter valores do textarea para markdown e mostra-los ao lado
