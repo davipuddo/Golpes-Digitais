@@ -54,7 +54,6 @@ function Cards()
 {
     CardsReady = true;
     var data = JSON.parse(localStorage.getItem('db'));
-    console.log(data);
     var TN = data.length;
     for (let i = 0; i < TN; i++)
     {
