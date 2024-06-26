@@ -16,7 +16,7 @@ if (localStorage.getItem('db'))
 
 if (window.matchMedia("(max-width:650px)").matches)
 {
-    if (!confirm("Resolução não suportada deseja continuar?"))
+    if (!confirm("Resolução não suportada, deseja continuar?"))
     {
         window.location.href = "index.html";
     }

@@ -70,11 +70,3 @@
     width: 111px;
     background-color: var(--secondaycolor);
 }
-
-@media screen and (max-width:800px)
-{
-    *
-    {
-        display: none;
-    }
-}
