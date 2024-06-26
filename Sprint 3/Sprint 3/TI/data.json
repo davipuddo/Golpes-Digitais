@@ -1,0 +1,41 @@
+[
+    {
+        "name": "phishing",
+        "title": "PHISHING",
+        "description": "\"Pescar\" (do inglês fish) as informações sigilosas dos usuários.",
+        "link": "Phising.html",
+        "passo": "Para se prevenir contra ataques phishing, observar o seguinte: Não confiar no nome na mensagem exibida no seu e-mail; Fique atento aos links recebidos; Verifique se há erros de ortografia em alguma mensagem recebida; "
+    },
+    {
+        "name": "boatos",
+        "title": "BOATOS",
+        "description": "Conteúdo alarmante e falso.",
+        "link": "Boatos.html",
+        "passo": "Para se prevenir contra boatos, observar o seguinte: Fique atento e desconfie de mensagens como, ameaças, oportunidade de ganho fácil, apelo emocional e senso de urgência; Pesquise bem sobre a empresa que te oferece algum benefício; Evite investimentos sem explicação clara do negócio;"
+
+    },
+    {
+        "name": "falsos emails",
+        "title": "FALSOS E-MAIL DE INSTITUIÇÕES FINANCEIRAS",
+        "description": "Mensagens falsas no e-mail.",
+        "link": "Falsos E-mails.html",
+        "passo": "Para se prevenir contra golpes de falsos e-mails, observar o seguinte: Não abra anexos ou não clique em links se você não conhece o remetente; Nunca forneça dados bancários ou cadastrais; Sempre confirme que os e-mails de bancos são da instituição; Dê preferência à retirada de boletos no site das empresas;"
+
+    },
+    {
+        "name": "furto de identidade",
+        "title": "FURTO DE IDENTIDADE",
+        "description": "Site Hackeado.",
+        "link": "Furto de indentidade.html",
+        "passo": "Para se prevenir contra golpes de furto de identidade, observar o seguinte: Colocar senhas fortes e autenticação de dois fatores; Desconfie de convites ou ofertas não solicitadas; Bloqueie e denuncie perfis falsos;"
+
+    },
+    {
+        "name": "golpe do boleto bancario",
+        "title": "GOLPE DO BOLETO BANCÁRIO",
+        "description": "Alteração do boleto bancário pelos cibernéticos.",
+        "link": "Golpe Boleto.html",
+        "passo": "Para se prevenir contra golpes de boleto bancário, observar o seguinte: Verifique se o número do código de barras corresponde ao valor do boleto; Confira se o valor do boleto é consistente com a compra ou serviço contratado; Encontre a logomarca correta do banco no boleto; Verifique se o endereço de e-mail ou telefone que enviou o boleto é legítimo e confiável;"
+
+    }
+]
