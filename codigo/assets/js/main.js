@@ -25,18 +25,43 @@ About.addEventListener("click", function(){
     window.location.href = "About.html";
 })
 
+// Ler dados do json
+var LocalJson = {};
+fetch('./assets/json/data.json')
+    .then(response => response.json())
+    .then(response => JSON.stringify(response))
+    .then(json => LocalJson = (json))
+    .then(function (){
+        var data = JSON.parse(LocalJson);
+        var LJS = data.length;
+        var db = [{}];    
+        var start = 0;
+        var w = 0;
+        if (localStorage.getItem('db'))
+        {
+            db = JSON.parse(localStorage.getItem('db'));
+        }
+        for (let i = start; i < LJS; i++)
+        {
+            db[i] = data[w];
+            w++;
+        }
+        localStorage.setItem('db', JSON.stringify(db));
+    });
+
 // Criar Cards baseados no DB
 function Cards()
 {
     CardsReady = true;
     var data = JSON.parse(localStorage.getItem('db'));
-    var TN = data.length
+    console.log(data);
+    var TN = data.length;
     for (let i = 0; i < TN; i++)
     {
         CardArea.innerHTML += `<div class="card">
                                 <div class="text">
                                    <h3 class="card-title">${data[i].title}</h3>
-                                   <p class="card-subtitle">${data[i].subtitle}</p>
+                                   <p class="card-description">${data[i].description}</p>
                                 </div>
                                    <button id="${i}" class="GoToDoc">Visitar</button>
                                </div>`

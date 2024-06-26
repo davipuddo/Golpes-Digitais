@@ -91,7 +91,7 @@
                 // Objeto com dados atuais
                 obj = {
                     title: Mtitle,
-                    subtitle: Stitle,
+                    description: Stitle,
                     date: CurrentDate(),
                     text: textVal,
                     N: N
