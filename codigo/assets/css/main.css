@@ -104,14 +104,14 @@ input
     font-weight: bold;
     font-family: monospace;
     font-size: 20px;
-    border-radius: 50px;
+    border-radius: 10px;
     padding: 12px 15px;
     gap: 10px;
 }
 
-.report .fa-user
+.report .fa-flag
 {
-    color: #1f1f1f;
+    color: rgb(192, 39, 39) !important;
     filter: drop-shadow(3px 3px 5px #444);
 }
 
@@ -165,7 +165,7 @@ div#cardbox
 div.card
 {
     width: 20vw;
-    height: 35vh;
+    height: calc(25vh + 50px);
     display: flex;
     flex-wrap: wrap;
     overflow-wrap: break-word;
@@ -238,8 +238,8 @@ footer button
 
     div.card
     {
-        height: 40vh;
-        width: 35vw;
+        height: 30vh;
+        width: 30vw;
     }
 }
 
