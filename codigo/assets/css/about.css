@@ -39,7 +39,7 @@
 #data
 {
     width: 100%;
-    padding-top: 20px;
+    padding: 30px 0px;
     display: flex;
     justify-content: center;
 }
@@ -47,7 +47,7 @@
 #data section
 {
     display: block;
-    height: 250;
+    height: 35vh;
     width: 540px;
     padding: 20px;
     border-radius: 12px;
@@ -75,14 +75,6 @@
     padding: 40px 0px 40px 0px;
 }
 
-@media screen and (min-width:751px) 
-{
-    #chart section
-    {
-        height: 80%;
-    }
-}
-
 @media screen and (max-width:750px)
 {
     main
@@ -97,7 +89,7 @@
     
     #chart section
     {  
-        width: 90%;
+        width: 90vw;
         height: max-content;
     }
 
@@ -109,7 +101,7 @@
     #data section
     {
         display: block;
-        width: 90%;
+        width: 90vw;
     }
 }
 
@@ -127,7 +119,7 @@
 
     #chart section
     {
-        width: 86%;
+        width: 86vw;
     }
 
     #data
@@ -139,7 +131,7 @@
     #data section
     {
         display: block;
-        width: 86%;
+        width: 86vw;
     }
 
     #data section p
