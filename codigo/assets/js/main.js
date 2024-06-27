@@ -6,6 +6,7 @@ const Editor = document.querySelector("#Edit");
 const About = document.querySelector("#About");
 const Delete = document.querySelector("#Delete");
 const search = document.querySelector("#Search");
+const reports = document.querySelector(".report");
 
 var NQ = 0;
 var CardsReady = false;
@@ -23,6 +24,11 @@ Editor.addEventListener("click", function(){
 // Ir para a pagina sobre
 About.addEventListener("click", function(){
     window.location.href = "About.html";
+})
+
+// Ir para denuncias
+reports.addEventListener('click', function(){
+    window.location.href = "Report.html"
 })
 
 // Ler dados do json

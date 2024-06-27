@@ -3,10 +3,16 @@
 const logo = document.querySelector("#Logomarca");
 const money = document.querySelector("#money");
 const Edit = document.querySelector("#EditPie");
+const reports = document.querySelector(".report");
 
 // Botao home
 logo.addEventListener("click", function(){
     window.location.href = "index.html";
+})
+
+// Ir para denuncias
+reports.addEventListener('click', function(){
+  window.location.href = "Report.html"
 })
 
 // Dados iniciais do grafico

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Idoso Seguro</title>
+    <meta name="description" content="Como se prevenir de golpes digitais">
+
+    <!--stylesheets-->
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/reports.css">
+
+</head>
+<body>
+    <header>
+        <nav>
+            <span class="Logomarca">
+                <button id="Logomarca"><img src="assets/images/Logomarca.png" alt="Logomarca" width="70" height="90">
+                <img id="Logoname" src="assets/images/Logomarca - Nome.png" alt="Logomarca" width="96" height="43"></button>
+            </span>
+        </nav>
+    </header>
+    <main>
+        <div id="page">
+            <div id="titulo">
+                <h1>Sistema de Denúncias</h1>
+                <h4>Esta página é feita pensada para você que sofreu algum golpe, abuso ou qualquer coisa que tenha te ofendido na internet</h4>
+            </div>
+            <button id="botaoAdicionar">Adicionar Denúncia</button>
+            <div id="formularioDenuncia">
+                <h2>Nova Denúncia</h2>
+                <p>Lembrando que quanto mais detalhes melhor será para resolvermos!</p><br>
+                <form id="formDenuncia">
+                    <label for="nome">Nome:</label><br>
+                    <input type="text" id="nome" name="nome" required><br><br>
+                    <label for="data">Data:</label><br>
+                    <input type="date" id="data" name="data" required><br><br>
+                    <label for="descricao">Descrição:</label><br>
+                    <textarea id="descricao" name="descricao" rows="4" required></textarea><br><br>
+                    <div id="btn">
+                        <button type="submit">Concluir</button>
+                        <button type="button" id="botaoCancelar">Cancelar</button>
+                    </div>
+                </form>
+            </div>
+            
+            <div id="listaDenuncias">
+                <h2>Suas denúncias anteriores</h2>
+            </div>
+        </div>
+    </main>
+</body>
+                            <!--scripts-->
+<script src="assets/js/reports.js"></script>
+</html>

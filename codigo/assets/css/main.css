@@ -67,7 +67,16 @@ nav input, nav button
     background-color: #ccc;
     border: 2px solid #222;
     border-radius: 8px;
-    padding: 5px 10px;
+    padding: 5px 20px;
+}
+
+nav button#denuncia
+{
+    font-weight: bold;
+    font-family: monospace;
+    font-size: 20px;
+    display: flex;
+    gap: 10px;
 }
 
 nav button#Logomarca
@@ -83,19 +92,24 @@ input
     width: 500px;
 }
 
-.Profile
+.report
 {
     align-self: center;
     justify-self: right;
 }
 
-.Profile button
+.report button
 { 
+    display: flex;
+    font-weight: bold;
+    font-family: monospace;
+    font-size: 20px;
     border-radius: 50px;
     padding: 12px 15px;
+    gap: 10px;
 }
 
-.Profile .fa-user
+.report .fa-user
 {
     color: #1f1f1f;
     filter: drop-shadow(3px 3px 5px #444);
@@ -127,6 +141,7 @@ main section#btn
 
 main section button
 {
+    font-weight: bold;
     display: flex;
     justify-content:center;
     width: 40px;
@@ -182,6 +197,7 @@ div.card button
     right: 0;
     bottom: 0;
     margin: 20px 20px;
+    font-weight: bold;
     font-size: 18px;
     text-decoration: none;
     background-color: var(--Bmaincolor);

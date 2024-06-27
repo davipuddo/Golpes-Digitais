@@ -1,9 +1,15 @@
 const logo = document.querySelector("#Logomarca");
 const text = document.querySelector("#doc");
+const reports = document.querySelector(".report");
 
 // Ir para homepage
 logo.addEventListener("click", function(){
     window.location.href = "index.html";
+})
+
+// Ir para denuncias
+reports.addEventListener('click', function(){
+    window.location.href = "Report.html"
 })
 
 var data = {};
