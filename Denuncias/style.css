@@ -1,0 +1,23 @@
+body {
+    font-family: Arial, sans-serif;
+}
+#formularioDenuncia {
+    display: none;
+    margin-top: 20px;
+}
+.denuncia {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px 0;
+}
+button{
+    text-decoration: none;
+    background: rgb(26, 160, 177);
+    border: 1px solid wheat;
+    width: 90px;
+    height: 40px;
+    padding: 5px auto;
+    border-radius: 10px;
+    cursor: pointer;
+    
+}
