@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <link href="style.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <title>Central de Ajuda</title>
+</head>
+<body>
+    <div class="titulo">
+        <img src="logomarca.png" alt="Logo" width="100">
+        <h1>Bem-vindo à Central de Ajuda!</h1>
+        <h4>Fique à vontade para tirar suas dúvidas.</h4>
+        <div class="suporte">
+            <h2>Dúvidas frequentes!</h2>
+            <input type="text" id="searchInput" placeholder="Pesquisar dúvidas..." class="form-control mb-4">
+            <div class="container">
+                <div class="accordion" id="accordionExample">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingOne">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                <ul>
+                                    <li>O que é phishing e como posso reconhecê-lo?</li>
+                                </ul>
+                            </button>
+                        </h2>
+                        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                O phishing é uma forma de fraude online em que os criminosos tentam obter informações pessoais, como senhas e números de cartão de crédito, fingindo ser entidades confiáveis em e-mails ou mensagens.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingTwo">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                <ul>
+                                    <li>Como posso proteger minhas senhas e dados online?</li>
+                                </ul>
+                            </button>
+                        </h2>
+                        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                Use senhas fortes e únicas. Use um gerenciador de senhas. Mantenha seus dispositivos atualizados. Evite Wi-Fi público não seguro.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingThree">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                <ul>
+                                    <li>É seguro clicar em links ou baixar anexos de e-mails de remetentes desconhecidos?</li>
+                                </ul>
+                            </button>
+                        </h2>
+                        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                Não é uma boa ideia clicar em links ou baixar anexos de e-mails de pessoas que você não conhece. Pode ser arriscado e você poderia acabar com vírus no seu computador ou sendo enganado por golpes online. É melhor sempre ser cauteloso e só clicar em links de fontes confiáveis.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingFour">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                <ul>
+                                    <li>O que devo fazer se eu suspeitar que fui vítima de um golpe online?</li>
+                                </ul>
+                            </button>
+                        </h2>
+                        <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                Se você suspeitar que foi vítima de um golpe, entre em contato imediatamente com seu banco ou instituição financeira, altere suas senhas, monitore suas contas para atividades suspeitas e considere informar a polícia ou um órgão de proteção ao consumidor.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingFive">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                <ul>
+                                    <li>Como posso identificar um site seguro para compras online?</li>
+                                </ul>
+                            </button>
+                        </h2>
+                        <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                Verifique se o site tem um endereço que começa com "https://" e procure por um ícone de cadeado na barra de endereço. Além disso, leia avaliações de outros clientes e evite sites com ofertas que parecem boas demais para serem verdade.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="contatos">
+            <h2>Fale conosco!</h2>
+            <div class="container">
+                <div class="accordion" id="accordionExample2">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingSix">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                                <ul>
+                                    <li>Caso ainda tenha dúvidas, entre em contato com:</li>
+                                </ul>
+                            </button>
+                        </h2>
+                        <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#accordionExample2">
+                            <div class="accordion-body">
+                                <ul>
+                                    <a class="zap" href="https://wa.me/5531999552608">WhatsApp: (31) 99955-2608</a>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+
