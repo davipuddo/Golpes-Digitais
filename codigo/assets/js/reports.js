@@ -1,7 +1,12 @@
 // Ir para menu home
 const home = document.querySelector('button#Logomarca');
+const back = document.querySelector('button#back');
 
 home.addEventListener('click',function(){
+    window.location.href = 'index.html';
+})
+
+back.addEventListener('click',function(){
     window.location.href = 'index.html';
 })
 

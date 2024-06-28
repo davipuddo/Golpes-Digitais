@@ -6,7 +6,7 @@ const Editor = document.querySelector("#Edit");
 const About = document.querySelector("#About");
 const Delete = document.querySelector("#Delete");
 const search = document.querySelector("#Search");
-const reports = document.querySelector(".report");
+const reports = document.querySelector("#denuncia");
 
 var NQ = 0;
 var CardsReady = false;
@@ -33,27 +33,31 @@ reports.addEventListener('click', function(){
 
 // Ler dados do json
 var LocalJson = {};
-fetch('./assets/json/data.json')
-    .then(response => response.json())
-    .then(response => JSON.stringify(response))
-    .then(json => LocalJson = (json))
-    .then(function (){
-        var data = JSON.parse(LocalJson);
-        var LJS = data.length;
-        var db = [{}];    
-        var start = 0;
-        var w = 0;
-        if (localStorage.getItem('db'))
-        {
-            db = JSON.parse(localStorage.getItem('db'));
-        }
-        for (let i = start; i < LJS; i++)
-        {
-            db[i] = data[w];
-            w++;
-        }
-        localStorage.setItem('db', JSON.stringify(db));
-    });
+function JSONData () {
+    fetch('./assets/json/data.json')
+        .then(response => response.json())
+        .then(response => JSON.stringify(response))
+        .then(json => LocalJson = (json))
+        .then(function (){
+            var data = JSON.parse(LocalJson);
+            var LJS = data.length;
+            var db = [{}];    
+            var start = 0;
+            var w = 0;
+            if (localStorage.getItem('db'))
+            {
+                db = JSON.parse(localStorage.getItem('db'));
+            }
+            for (let i = start; i < LJS; i++)
+            {
+                db[i] = data[w];
+                w++;
+            }
+            localStorage.setItem('db', JSON.stringify(db));
+        });
+}
+
+JSONData();
 
 // Criar Cards baseados no DB
 function Cards()
@@ -76,11 +80,11 @@ function Cards()
 // Deletar Cards
 Delete.addEventListener("click", function(){
     localStorage.removeItem('db');
+    JSONData();
     location.reload();
 })
 
 // Carregar cards
-
  if (localStorage.getItem('db'))
 {
     Cards();  
@@ -123,3 +127,26 @@ if (CardsReady)
         });
     });
 }
+
+// Media Queries
+function MediaQueries ()
+{
+    let flag = `<i class="fa-solid fa-flag" aria-hidden="true"></i>`
+    let reportText = '';
+    if (matchMedia("(max-width:510px)").matches)
+    {
+        reportText = flag;
+    }
+    else
+    {
+        reportText = flag + 'Denúncias';
+    }
+
+    if (reports.innerHTML !== reportText)
+    {
+        reports.innerHTML = reportText;
+    }
+}
+
+MediaQueries();
+setInterval(MediaQueries, 100); // Procurar por mudancas a cada 0.1 segundos

@@ -211,6 +211,7 @@ footer
 {
     width: 10%;
     bottom: 0;
+    left: 0;
     position: fixed;
     padding: 60px 0px;
 }
@@ -220,7 +221,6 @@ footer button
 {
     z-index: 1;
     position: absolute;
-    right: 0;
     font-size: 30px;
     margin: 0px 30px;
     padding: 2px 10px;
@@ -281,12 +281,7 @@ footer button
         height: 45vh;
     }
 
-    nav
-    {
-        justify-content: center;
-    }
-
-    nav section
+    nav section form
     {
         display: none;
     }

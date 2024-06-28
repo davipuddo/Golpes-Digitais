@@ -4,10 +4,17 @@ const logo = document.querySelector("#Logomarca");
 const money = document.querySelector("#money");
 const Edit = document.querySelector("#EditPie");
 const reports = document.querySelector(".report");
+const back = document.querySelector('button#back');
+
 
 // Botao home
 logo.addEventListener("click", function(){
     window.location.href = "index.html";
+})
+
+// Botao home
+back.addEventListener("click", function(){
+  window.location.href = "index.html";
 })
 
 // Ir para denuncias

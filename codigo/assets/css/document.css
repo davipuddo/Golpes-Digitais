@@ -1,11 +1,36 @@
 /* Caixas de texto */
 
+nav
+{
+    justify-content: center;
+}
+
 #page
 {
     display: flex;
     flex-wrap: nowrap;
     gap: 0px;
     height: calc(100vh - 220px);
+}
+
+nav button#back
+{
+    z-index: 1;
+    position: fixed;
+    left: 0;
+    padding: 0px;
+    margin-left: 40px;
+    margin-top: 40px;
+    align-self: flex-start;
+    font-weight: bold;
+    display: flex;
+    justify-content:center;
+    width: 40px;
+    height: 35px;
+    background-color: white;
+    border: 2px solid #222;
+    border-radius: 8px;
+    padding: 7px 10px;
 }
 
 #doc
