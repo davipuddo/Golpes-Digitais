@@ -194,7 +194,7 @@ function MediaQueries(){
   }
 }
 
-setInterval (MediaQueries, 100);
+setInterval (MediaQueries, 100);    // Procurar mudancas na resolucao a cada 0.1 segundos
 
 // Apresentar numero de reais perdidos
 var target = 22.9;
@@ -227,7 +227,6 @@ function FAQButons (){
   const faqItems = document.querySelectorAll('.faq-item');
   faqItems.forEach(faqItem => {
         const faqQuestion = faqItem.querySelector('.faq-question');
-        const faqAnswer = faqItem.querySelector('.faq-answer');
         const faqToggle = faqQuestion.querySelector('.faq-toggle');
   
         faqQuestion.addEventListener('click', () => {
@@ -238,21 +237,24 @@ function FAQButons (){
 }
 
 // Criar perguntas e respostas baseados no objeto de dados (faqOBJ)
-function ReadFAQ (){
-const FAQ = document.querySelector('.container');
-    faqOBJ.forEach(faq => {
+function ReadFAQ () {
 
-      FAQ.innerHTML +=  `<div class="faq-item">
-                          <div class="faq-question">
-                              <h2>${faq.question}</h2>
-                              <span class="faq-toggle">+</span>
-                          </div>
-                          <div class="faq-answer">
-                            <p>${faq.answer}</p>
-                          </div>
-                        </div>`
-    });
-    FAQButons();
+  const FAQbox = document.querySelector('.container');
+  if (faqOBJ.length >= 0)
+  {
+    for (let i = 0; i < faqOBJ.length; i++)
+    {
+      let faq = faqOBJ[i];
+      FAQbox.innerHTML +=  `<div class="faq-item">
+                              <div class="faq-question">
+                                  <h2>${faq.question}</h2>
+                                  <span class="faq-toggle">+</span>
+                              </div>
+                              <div class="faq-answer">
+                                <p>${faq.answer}</p>
+                              </div>
+                            </div>`
+    }
+  }
+  FAQButons();  // Definir botoes novos
 }
-
-document.addEventListener("DOMContentLoaded", ReadFAQ);
