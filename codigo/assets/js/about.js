@@ -217,9 +217,22 @@ var faqOBJ = {};
 
 // Ler dados do arquivo FAQ.json
 fetch("./assets/json/FAQ.json")
+  .then(res => checkError(res))
   .then(res => res.json())
   .then(res => faqOBJ = res)
   .then(ReadFAQ);
+
+// Verificar existencia dos dados do arquivo FAQ.json
+function checkError (response)
+{
+  if (!response.ok)
+    {
+      alert('Erro na leitura do FAQ.json\nStatus: ' + response.status);
+      console.error(response.status);
+      response = undefined;
+    }
+    return (response);
+}
 
 // Adicionar a funcionalidade aos botoes
 function FAQButons (){
