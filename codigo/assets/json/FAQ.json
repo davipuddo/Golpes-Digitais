@@ -1,0 +1,63 @@
+[
+    {
+        "id": 0,
+        "question": "O que é phishing e como posso reconhecê-lo?",
+        "answer": "O phishing é uma forma de fraude online em que os criminosos tentam obter informações pessoais, como senhas e números de cartão de crédito, fingindo ser entidades confiáveis em e-mails ou mensagens."
+    },
+    {
+        "id": 1,
+        "question": "Como posso proteger minhas senhas e dados online?",
+        "answer": "Use senhas fortes e únicas. Use um gerenciador de senhas. Mantenha seus dispositivos atualizados. Evite Wi-Fi público não seguro."
+    },
+    {
+        "id": 2,
+        "question": "É seguro clicar em links ou baixar anexos de e-mails de remetentes desconhecidos?",
+        "answer": "Não é uma boa ideia clicar em links ou baixar anexos de e-mails de pessoas que você não conhece. Pode ser arriscado e você poderia acabar com vírus no seu computador ou sendo enganado por golpes online. É melhor sempre ser cauteloso e só clicar em links de fontes confiáveis."
+    },
+    {
+        "id": 3,
+        "question": "Como posso reconhecer um e-mail fraudulento?",
+        "answer": "E-mails fraudulentos geralmente têm erros de ortografia e gramática, endereços de remetentes suspeitos, e links que levam a sites falsos. Desconfie de mensagens que pedem informações pessoais urgentemente."
+    },
+    {
+        "id": 4,
+        "question": "O que devo fazer se eu suspeitar que fui vítima de um golpe online?",
+        "answer": "Se você suspeitar que foi vítima de um golpe, entre em contato imediatamente com seu banco ou instituição financeira, altere suas senhas, monitore suas contas para atividades suspeitas e considere informar a polícia ou um órgão de proteção ao consumidor."
+    },
+    {
+        "id": 5,
+        "question": "Como posso criar senhas seguras?",
+        "answer": "Para criar senhas seguras, utilize combinações de letras maiúsculas e minúsculas, números e caracteres especiais. Evite informações pessoais óbvias e nunca compartilhe suas senhas com outras pessoas. Evite utilizar a mesma senha em diversos sites diferentes."
+    },
+    {
+        "id": 6,
+        "question": "Quais são os sinais de que meu dispositivo pode estar infectado por malware?",
+        "answer": "Sinais de infecção por malware incluem lentidão no funcionamento do dispositivo, pop-ups frequentes, alterações não autorizadas nas configurações e atividades suspeitas na conta."
+    },
+    {
+        "id": 7,
+        "question": "Como posso verificar se um site é seguro antes de realizar uma compra online?",
+        "answer": "Verifique se o site possui um certificado SSL (https://), pesquise por avaliações e comentários de outros usuários, evite inserir informações sensíveis em sites desconhecidos e confira se a loja online tem políticas claras de privacidade e devolução."
+    },
+    {
+        "id": 8,
+        "question": "Quais são os sinais de alerta de um golpe digital?",
+        "answer": "Ofertas que parecem boas demais para ser verdade geralmente são armadilhas. Golpistas costumam pressionar suas vítimas a agir rapidamente para evitar que tenham tempo de verificar os fatos. Nunca forneça informações pessoais ou financeiras a desconhecidos. Cuidado ao clicar em links ou abrir anexos de emails suspeitos, e desconfie de mensagens com erros de ortografia e gramática."
+    },
+    {
+        "id": 9,
+        "question": "O que é autenticação de dois fatores (2FA) e por que devo usá-la?",
+        "answer": "A autenticação de dois fatores (2FA) adiciona uma camada extra de segurança, exigindo uma segunda forma de verificação além da senha, como um código enviado para seu telefone. Isso dificulta que hackers acessem sua conta mesmo que saibam sua senha."
+    },
+    {
+        "id": 10,
+        "question": "Por que é importante fazer backup dos meus dados?",
+        "answer": "Fazer backup dos seus dados garante que você não perca informações importantes em caso de falhas no dispositivo, ataques de ransomware ou outros incidentes. Use serviços de armazenamento em nuvem ou discos rígidos externos para criar cópias regulares dos seus arquivos."
+    },
+    {
+        "id": 11,
+        "question": "Como posso manter minha privacidade online?",
+        "answer": "Ajuste as configurações de privacidade nas redes sociais para limitar quem pode ver suas informações pessoais, use navegadores seguros e considere o uso de uma VPN para proteger sua conexão de internet."
+    }
+
+]

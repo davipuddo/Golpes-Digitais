@@ -5,7 +5,7 @@ const money = document.querySelector("#money");
 const Edit = document.querySelector("#EditPie");
 const reports = document.querySelector(".report");
 const back = document.querySelector('button#back');
-
+const databox = document.querySelector('#data section');
 
 // Botao home
 logo.addEventListener("click", function(){
@@ -101,13 +101,6 @@ function SetNameOriginal(){
 // Dados do grafico
 var Tsize = 26;
 
-// Controlar responsividade do grafico          
-// NOTA : Usar F5 para atualizar o grafico apos alteracao da resolucao da pagina
-if (window.matchMedia("(max-width:500px)").matches)
-{
-  Tsize = 18;
-}
-
 // Dados do grafico
 var Colors = ["#FF6445","#45FF77","#45FFF5","#62807E" ];
 var data = {
@@ -132,6 +125,8 @@ var data = {
           legend: {
             position: "right",
             labels: {
+              boxWidth: 40,
+              padding: 16,
               usePointStyle: true,
               fontSize : (Tsize-6),
               fontStyle: "bold",
@@ -145,9 +140,61 @@ var data = {
 const MyChart = new Chart("piechart", data);
 
 // Atualizar grafico
-function UpdateGraph (){ 
+function UpdateGraph (){
   MyChart.update();
 }
+
+// Controlar responsividade do grafico          
+var ix = 0;
+function MediaQueries(){
+
+  
+  let tmp = ix;
+  if (window.matchMedia("(max-width:420px)").matches)
+  {
+    // Media querie do grafico
+    MyChart.options.title.fontSize = 18;
+    MyChart.options.legend.labels.fontSize = 12;
+    MyChart.options.legend.labels.boxWidth = 10;
+    MyChart.options.legend.labels.padding = 10;
+    ix = 2;
+
+    // Outros media queries 
+    let wi = window.screen.width/100;
+    let res = parseInt(110 + (1000/(wi)));
+    databox.style.height = res +'px';
+  }
+  else if (window.matchMedia("(max-width:500px)").matches)
+  {
+    MyChart.options.title.fontSize = 20;
+    MyChart.options.legend.labels.fontSize = 16;
+    MyChart.options.legend.labels.boxWidth = 20;
+    MyChart.options.legend.labels.padding = 12  ;
+    ix = 1;
+  }
+  else
+  {
+    MyChart.options.title.fontSize = 26;
+    MyChart.options.legend.labels.fontSize = 20;
+    MyChart.options.legend.labels.boxWidth = 40;
+    MyChart.options.legend.labels.padding = 16;
+    ix = 0;
+
+    databox.style.height = '310px';
+  }
+  if (ix != tmp)
+  {
+    UpdateGraph();
+  }
+
+  // Outras media queries
+  if (window.matchMedia("(max-width:420px)").matches)
+  {
+
+  }
+}
+
+setInterval (MediaQueries, 100);
 
 // Apresentar numero de reais perdidos
 var target = 22.9;
@@ -165,17 +212,47 @@ var interval = setInterval(function(){
   };
   money.innerHTML = x + " Bilhões de reais";
 }, 40);
-
-const faqItems = document.querySelectorAll('.faq-item');
-
-    faqItems.forEach(faqItem => {
-      const faqQuestion = faqItem.querySelector('.faq-question');
-      const faqAnswer = faqItem.querySelector('.faq-answer');
-      const faqToggle = faqQuestion.querySelector('.faq-toggle');
-
-      faqQuestion.addEventListener('click', () => {
-        faqItem.classList.toggle('active');
-        faqToggle.textContent = faqItem.classList.contains('active') ? '-' : '+';
-    });
-    });
     
+var faqOBJ = {};
+
+// Ler dados do arquivo FAQ.json
+fetch("./assets/json/FAQ.json")
+  .then(res => res.json())
+  .then(res => faqOBJ = res)
+  .then(ReadFAQ);
+
+// Adicionar a funcionalidade aos botoes
+function FAQButons (){
+  
+  const faqItems = document.querySelectorAll('.faq-item');
+  faqItems.forEach(faqItem => {
+        const faqQuestion = faqItem.querySelector('.faq-question');
+        const faqAnswer = faqItem.querySelector('.faq-answer');
+        const faqToggle = faqQuestion.querySelector('.faq-toggle');
+  
+        faqQuestion.addEventListener('click', () => {
+          faqItem.classList.toggle('active');
+          faqToggle.textContent = faqItem.classList.contains('active') ? '-' : '+';
+      });
+  });
+}
+
+// Criar perguntas e respostas baseados no objeto de dados (faqOBJ)
+function ReadFAQ (){
+const FAQ = document.querySelector('.container');
+    faqOBJ.forEach(faq => {
+
+      FAQ.innerHTML +=  `<div class="faq-item">
+                          <div class="faq-question">
+                              <h2>${faq.question}</h2>
+                              <span class="faq-toggle">+</span>
+                          </div>
+                          <div class="faq-answer">
+                            <p>${faq.answer}</p>
+                          </div>
+                        </div>`
+    });
+    FAQButons();
+}
+
+document.addEventListener("DOMContentLoaded", ReadFAQ);

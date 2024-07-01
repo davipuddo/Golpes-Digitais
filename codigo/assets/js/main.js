@@ -34,7 +34,7 @@ reports.addEventListener('click', function(){
 // Ler dados do json
 var LocalJson = {};
 function JSONData () {
-    fetch('./assets/json/data.json')
+    fetch('./assets/json/news.json')
         .then(response => response.json())
         .then(response => JSON.stringify(response))
         .then(json => LocalJson = (json))
