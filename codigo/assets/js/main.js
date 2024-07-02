@@ -35,6 +35,7 @@ reports.addEventListener('click', function(){
 var LocalJson = {};
 function JSONData () {
     fetch('./assets/json/news.json')
+        .then(res => checkError(res))
         .then(response => response.json())
         .then(response => JSON.stringify(response))
         .then(json => LocalJson = (json))
@@ -55,6 +56,18 @@ function JSONData () {
             }
             localStorage.setItem('db', JSON.stringify(db));
         });
+}
+
+// Verificar existencia dos dados do arquivo news.json
+function checkError (response)
+{
+  if (!response.ok)
+    {
+      alert('Erro na leitura do FAQ.json\nStatus: ' + response.status);
+      console.error(response.status);
+      response = undefined;
+    }
+    return (response);
 }
 
 JSONData();
