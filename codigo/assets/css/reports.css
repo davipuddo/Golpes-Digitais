@@ -114,3 +114,11 @@ div.denuncia button
         transform: translate(0%, 5%);
     }
 }
+
+@media screen and (max-width:500px) 
+{
+    #formularioDenuncia p
+    {
+        font-size: 18px;
+    }    
+}
