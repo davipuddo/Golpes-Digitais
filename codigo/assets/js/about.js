@@ -150,7 +150,20 @@ function MediaQueries(){
 
   
   let tmp = ix;
-  if (window.matchMedia("(max-width:420px)").matches)
+  if (window.matchMedia("(max-width:350px)").matches)
+  {
+    MyChart.options.title.fontSize = 18;
+    MyChart.options.legend.labels.fontSize = 12;
+    MyChart.options.legend.labels.boxWidth = 6;
+    MyChart.options.legend.labels.padding = 8;
+    ix = 3;
+
+     // Outros media queries 
+     let wi = window.screen.width/100;
+     let res = parseInt(110 + (1000/(wi)));
+     databox.style.height = res +'px';
+  }
+  else if (window.matchMedia("(max-width:420px)").matches)
   {
     // Media querie do grafico
     MyChart.options.title.fontSize = 18;
