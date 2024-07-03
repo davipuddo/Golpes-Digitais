@@ -113,12 +113,3 @@ document.getElementById('botaoCancelar').addEventListener('click', function () {
 // Carrega as denúncias ao carregar a página
 window.onload = carregarDenuncias;
 
-setInterval(MediaQueries, 100);
-
-function MediaQueries () {
-
-    if (window.matchMedia('(max-width:450px)').matches)
-    {
-            console.log(1);
-    }
-}

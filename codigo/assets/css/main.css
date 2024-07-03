@@ -5,6 +5,13 @@
     --maincolor: #3873C4;
     --Bmaincolor: #36b4ee;
     --secondaycolor: #75E189;
+    --BoxShadow: drop-shadow(2px 2px 1.5px #333);
+    --BTNshadow: drop-shadow(1px 2px 0.5px #222);
+}
+
+html
+{
+    scroll-behavior: smooth;
 }
 
 body, ul, li, p 
@@ -38,10 +45,15 @@ nav
     justify-content: space-between;
 }
 
-nav .Logomarca , nav section
+nav .Logomarca
 {
     flex-wrap: wrap;
     filter:drop-shadow(3px 3px 6px #999);
+}
+
+nav section
+{
+    filter: var(--BoxShadow);
 }
 
 .Logomarca
@@ -86,19 +98,46 @@ nav button#Logomarca
     border-radius: 0;
 }
 
-input
+.Searchbar
 {
-    height: 30px;
-    width: 500px;
+    justify-self: right;
+    width: max-content !important;
 }
 
-.report
+input
 {
-    align-self: center;
+    font-weight: bold;
+    font-family: monospace;
+    font-size: 20px;
+    height: 30px;
+    width: 400px;
+}
+
+div#btn
+{
+    display: flex;
+    gap: 20px;
+    justify-content: right;
+}
+
+button#About .fa-circle-info
+{
+    font-size: 22px;
+    color: var(--maincolor);
+    text-shadow: 1px 1px 0px #222;
+}
+
+.report, .about, .search
+{
     justify-self: right;
 }
 
-.report button
+button#openSearch
+{
+    display: none;
+}
+
+.report button, #About, #openSearch
 { 
     display: flex;
     font-weight: bold;
@@ -112,7 +151,7 @@ input
 .report .fa-flag
 {
     color: rgb(192, 39, 39) !important;
-    filter: drop-shadow(3px 3px 5px #444);
+    text-shadow: 2px 2px 3px #222;
 }
 
 button:hover:not(#Logomarca)
@@ -136,7 +175,11 @@ main section#btn
     display: flex;
     padding-left: 98%;
     gap: 12px;
-    filter:drop-shadow(2px 2px 2px #444);
+}
+
+button:hover
+{
+    filter: none;
 }
 
 main section button
@@ -146,6 +189,7 @@ main section button
     justify-content:center;
     width: 40px;
     height: 35px;
+    filter: var(--BTNshadow);
     background-color: white;
     border: 2px solid #222;
     border-radius: 8px;
@@ -174,7 +218,7 @@ div.card
     border: 2px solid #222;
     padding: 0px 18px;
     background-color: white;
-    filter:drop-shadow(3px 3px 4px #333);
+    filter: var(--BoxShadow);
     align-items: flex-end;
 }
 
@@ -191,17 +235,21 @@ div.text
     align-self: start;
 }
 
+div.card div.btn
+{
+    width: 100%;
+    display: flex;
+    justify-content: right;
+}
+
 div.card button
 {
-    position: absolute;
-    right: 0;
-    bottom: 0;
     margin: 20px 20px;
     font-weight: bold;
     font-size: 18px;
     text-decoration: none;
     background-color: var(--Bmaincolor);
-    filter:drop-shadow(2px 2px 2px #444);
+    filter: var(--BTNshadow);
     border: 2px solid #222;
     border-radius: 10px;
     padding: 10px 12px;
@@ -219,14 +267,18 @@ footer
 /*Rodape*/
 footer button
 {
-    z-index: 1;
-    position: absolute;
-    font-size: 30px;
-    margin: 0px 30px;
-    padding: 2px 10px;
+    filter: var(--BTNshadow);
+    position: fixed;
+    transform: translate(100%, 0%);
+    font-weight: bold;
+    display: flex;
+    justify-content:center;
+    width: 40px;
+    height: 35px;
     background-color: white;
     border: 2px solid #222;
     border-radius: 8px;
+    padding: 7px 10px;
 }
 
 @media screen and (max-width: 1500px) 
@@ -253,7 +305,7 @@ footer button
 
     nav input
     {
-        width: fit-content;
+        width: 300px;
     }
 }
 
@@ -270,10 +322,15 @@ footer button
     div.card
     {
         width: 70vw;
-    }   
+    }
+
+    nav input
+    {
+        width: 255px;
+    }
 }
 
-@media screen and (max-width:510px)
+@media screen and (max-width:570px)
 {
 
     div.card
@@ -281,9 +338,29 @@ footer button
         height: 45vh;
     }
 
-    nav section form
+    form input
     {
         display: none;
+    }
+
+    #navbar
+    {
+        gap:0px;
+    }
+
+    div#btn
+    {
+        padding-top: 20px;
+    }
+
+    button#About, span button#denuncia, button#openSearch
+    {
+        display: flex;
+        justify-content: center;
+        height: 42px;
+        width: 42px;
+        font-size: 22px;
+        padding: 8px 10px;
     }
 
     .Logomarca
@@ -300,9 +377,43 @@ footer button
 
     #Logoname
     {
-        padding-bottom: 0px;
+        padding-bottom: 10px;
         height: 35px !important;
         width: 70px !important;
+    }
+}
+
+@media screen and (max-width:380px)
+{
+    nav section button
+    {
+        font-size: 18px !important;
+        width: 34px !important;
+        height: 34px !important;
+    }
+
+    button#About i
+    {
+       line-height: 15px !important;
+    }
+}
+
+@media screen and (max-width:370px)
+{
+    nav
+    {
+        display: block !important;
+    }
+
+    span.Logomarca
+    {
+        display: flex;
+        justify-content: center;
+    }
+
+    section#navbar
+    {
+        justify-content: center;
     }
 }
 
@@ -341,4 +452,30 @@ footer button
         padding: 5px 15px;
         font-size: 35px;
     }
+}
+
+@media screen and (max-height:570px) 
+{
+    div.card
+    {
+        height: 55vh;
+    }  
+}
+
+
+@media screen and (max-height:460px) 
+{
+    div.card
+    {
+        height: 70vh;
+    }  
+}
+
+@media screen and (max-height:400px) and (max-width:1000px) 
+{
+    div.card
+    {
+        width: 35vw;
+        height: 92vh;
+    }  
 }

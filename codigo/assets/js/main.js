@@ -5,8 +5,10 @@ const CardArea = document.querySelector("main div");
 const Editor = document.querySelector("#Edit");
 const About = document.querySelector("#About");
 const Delete = document.querySelector("#Delete");
-const search = document.querySelector("#Search");
+const search = document.getElementById('searchInput');
 const reports = document.querySelector("#denuncia");
+const scroll = document.querySelector('button#scroll');
+const openSearch = document.querySelector('button#openSearch');
 
 var NQ = 0;
 var CardsReady = false;
@@ -29,6 +31,12 @@ About.addEventListener("click", function(){
 // Ir para denuncias
 reports.addEventListener('click', function(){
     window.location.href = changeURL('Report.html');
+})
+
+// Botao para ir para o topo da pagina
+scroll.addEventListener('click', function () {
+
+    window.scrollTo(0, 0);
 })
 
 // Mudar a url de forma mais ampla
@@ -91,11 +99,13 @@ function Cards()
     for (let i = 0; i < TN; i++)
     {
         CardArea.innerHTML += `<div class="card">
-                                <div class="text">
+                                 <div class="text">
                                    <h3 class="card-title">${data[i].title}</h3>
                                    <p class="card-description">${data[i].description}</p>
-                                </div>
-                                   <button id="${i}" class="GoToDoc">Visitar</button>
+                                 </div>
+                                 <div class="btn">
+                                   <button id="${i}" class="GoToDoc" title="Visitar notícia">Visitar</button>
+                                 </div>
                                </div>`
     }
 }
@@ -144,7 +154,6 @@ if (CardsReady)
 
     // Pesquisar
     document.addEventListener('DOMContentLoaded', function () {
-        const searchInput = document.getElementById('searchInput');
     
         searchInput.addEventListener('input', function () {
           const searchTerm = this.value.toLowerCase();
@@ -164,23 +173,48 @@ if (CardsReady)
     });
 }
 
+var toggleSearch = false;
+openSearch.addEventListener('click', function(){
+    if (toggleSearch)
+    {
+        search.style.display = 'none';
+    }
+    else
+    {
+        search.style.display = 'block';
+        search.style.position = 'fixed';
+        search.style.transform = 'translate(-297px, 10px)'
+        search.style.zIndex = '2';
+    }
+    toggleSearch = !toggleSearch;
+})
+
 // Media Queries
 function MediaQueries ()
 {
-    let flag = `<i class="fa-solid fa-flag" aria-hidden="true"></i>`
+    let info = `<i class="fa-solid fa-circle-info" aria-hidden="true"></i>`;
+    let flag = `<i class="fa-solid fa-flag" aria-hidden="true"></i>`;
     let reportText = '';
-    if (matchMedia("(max-width:510px)").matches)
+    let aboutText = '';
+    if (matchMedia("(max-width:575px)").matches)
     {
+        aboutText = info;
         reportText = flag;
     }
     else
     {
+        aboutText = info + 'Sobre';
         reportText = flag + 'Denúncias';
     }
 
     if (reports.innerHTML !== reportText)
     {
         reports.innerHTML = reportText;
+    }
+
+    if (About.innerHTML !== aboutText)
+    {
+        About.innerHTML = aboutText;
     }
 }
 

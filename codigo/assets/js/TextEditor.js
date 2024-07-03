@@ -4,16 +4,21 @@ const Jtext = $("#markdownText");
 const text = document.querySelector("#markdownText");
 const preview = document.querySelector("#preview");
 const logo = document.querySelector("#Logomarca");
-const reports = document.querySelector(".report");
+const back = document.querySelector("button#back");
+
 var   keyname;
+
 // Home button
 logo.addEventListener("click", function(){
     window.location.href = "index.html";
 })
 // Ir para denuncias
-reports.addEventListener('click', function(){
-    window.location.href = "Report.html"
+back.addEventListener('click', function(){
+    window.location.href = "index.html"
 })
+
+
+
 // Responsividade
 if (window.matchMedia("(max-width:800px)").matches)
 {

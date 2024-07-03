@@ -29,6 +29,7 @@ nav button#back
     justify-content:center;
     width: 40px;
     height: 35px;
+    filter: var(--BTNshadow);
     background-color: white;
     border: 2px solid #222;
     border-radius: 8px;
@@ -48,4 +49,18 @@ nav button#back
     box-shadow: 5px 5px 9px #333;
     overflow-wrap: break-word;
     overflow-y: auto;
+}
+
+@media screen and (max-width:650px) 
+{
+    #doc
+    {
+        width: 75vw;
+        font-size: 20px;
+    }
+    
+    #doc p, #doc ol, #doc li
+    {
+        font-size: 20px;
+    }
 }

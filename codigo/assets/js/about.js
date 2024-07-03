@@ -3,7 +3,6 @@
 const logo = document.querySelector("#Logomarca");
 const money = document.querySelector("#money");
 const Edit = document.querySelector("#EditPie");
-const reports = document.querySelector(".report");
 const back = document.querySelector('button#back');
 const databox = document.querySelector('#data section');
 
@@ -17,10 +16,6 @@ back.addEventListener("click", function(){
   window.location.href = "index.html";
 })
 
-// Ir para denuncias
-reports.addEventListener('click', function(){
-  window.location.href = "Report.html"
-})
 
 // Dados iniciais do grafico
 var ValuesPercentage = ["Falso Pagamento", "Invasão de contas", "Anúncio falso", "Outros"];
@@ -247,7 +242,6 @@ function FAQButons (){
   
         faqQuestion.addEventListener('click', () => {
           faqItem.classList.toggle('active');
-          faqToggle.textContent = faqItem.classList.contains('active') ? '-' : '+';
       });
   });
 }
@@ -264,7 +258,7 @@ function ReadFAQ () {
       FAQbox.innerHTML +=  `<div class="faq-item">
                               <div class="faq-question">
                                   <h2>${faq.question}</h2>
-                                  <span class="faq-toggle">+</span>
+                                  <span class="faq-toggle"><i class="fa-solid fa-chevron-down"></i></span>
                               </div>
                               <div class="faq-answer">
                                 <p>${faq.answer}</p>

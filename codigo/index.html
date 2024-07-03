@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Idoso Seguro</title>
     <meta name="description" content="Como se prevenir de golpes digitais">
+    <link rel="icon" href="assets/images/Logomarca.png">
 
     <!--stylesheets-->
     <link rel="stylesheet" href="assets/css/main.css">
@@ -19,10 +20,18 @@
                 <button id="Logomarca"><img src="assets/images/Logomarca.png" alt="Logomarca" width="70" height="90">
                 <img id="Logoname" src="assets/images/Logomarca - Nome.png" alt="Logomarca" width="96" height="43"></button>
             </span>
-            <section>
-                <span class="report">
-                    <button type="submit" id="denuncia"><i class="fa-solid fa-flag"></i>Denúncias</button>
-                </span>
+            <section id="navbar">
+                <div id="btn">
+                    <span class="search">
+                        <button id="openSearch" title="Abrir Pesquisa"><i class="fa-solid fa-magnifying-glass"></i></button>
+                    </span>
+                    <span class="about">
+                        <button id="About" title="Sobre"><i class="fa-solid fa-circle-info"></i>Sobre </button>
+                    </span>
+                    <span class="report">
+                        <button id="denuncia" title="Pagina de denuncia"><i class="fa-solid fa-flag"></i>Denúncias</button>
+                    </span>
+                </div>
                 <form action="index.html" class="Searchbar">
                     <input type="text" id="searchInput" placeholder="Pesquise aqui!" name="search">
                 </form>
@@ -31,15 +40,15 @@
     </header>
     <main>
         <section id="btn">
-            <button id="Edit"><i class="fa-solid fa-plus"></i></button>
-            <button id="Delete"><i class="fa-solid fa-eraser"></i></button>
+            <button id="Edit" title="Adicionar notícia"><i class="fa-solid fa-plus"></i></button>
+            <button id="Delete" title="Apagar notícia"><i class="fa-solid fa-eraser"></i></button>
         </section>
             <div id="cardbox">
     
             </div>
     </main>
     <footer>
-        <button id="About">?</button>
+        <button id="scroll" title="Ir para o topo"><i class="fa-solid fa-arrow-up"></i></button>
     </footer>
 </body>
                             <!--scripts-->
