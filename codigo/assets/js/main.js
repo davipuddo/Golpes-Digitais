@@ -106,9 +106,13 @@ Delete.addEventListener("click", function(){
 })
 
 // Carregar cards
- if (localStorage.getItem('db'))
+if (localStorage.getItem('db'))
 {
     Cards();  
+}
+else
+{
+    setTimeout(Cards, 1000);
 }
 
 if (CardsReady)
