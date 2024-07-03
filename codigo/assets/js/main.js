@@ -36,7 +36,6 @@ function changeURL (html) {
     let url = window.location.href;
     url = url.split('codigo/');
     url = url[0] + 'codigo/' + html;
-    console.log(url);
     return (url);
 }
 
