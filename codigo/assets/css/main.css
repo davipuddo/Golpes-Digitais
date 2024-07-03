@@ -348,7 +348,7 @@ footer button
         height: 45vh;
     }
 
-    form input
+    nav form input#searchInput
     {
         display: none;
         transform: translate(-297px, 10px);

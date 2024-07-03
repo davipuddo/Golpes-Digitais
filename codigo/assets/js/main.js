@@ -164,7 +164,7 @@ if (CardsReady)
             const titulo = card.querySelector('h3:first-of-type').textContent.toLowerCase();
     
             if (titulo.includes(searchTerm)) {
-              card.style.display = 'block';
+              card.style.display = 'flex';
             } else {
               card.style.display = 'none';
             }
