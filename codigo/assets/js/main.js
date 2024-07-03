@@ -18,17 +18,17 @@ logo.addEventListener("click", function(){
 
 // Ir para o editor de texto
 Editor.addEventListener("click", function(){
-    window.location.href = changeURL('index.html');
+    window.location.href = changeURL('TextEditor.html');
     });
 
 // Ir para a pagina sobre
 About.addEventListener("click", function(){
-    window.location.href = changeURL('index.html');
+    window.location.href = changeURL('About.html');
 })
 
 // Ir para denuncias
 reports.addEventListener('click', function(){
-    window.location.href = changeURL('index.html');
+    window.location.href = changeURL('Report.html');
 })
 
 // Mudar a url de forma mais ampla
