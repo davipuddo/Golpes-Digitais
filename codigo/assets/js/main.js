@@ -13,7 +13,7 @@ var CardsReady = false;
 
 // Ir para homepage
 logo.addEventListener("click", function(){
-   window.Location.href = changeURL('index.html');
+   changeURL('index.html');
 })
 
 // Ir para o editor de texto
@@ -33,8 +33,11 @@ reports.addEventListener('click', function(){
 
 // Mudar a url de forma mais ampla
 function changeURL (html) {
+    console.log(window.location.href);
+    console.log(window.location.pathname);
     let url = window.location.href;
     url = url.split(window.location.pathname);
+    console.log(url);
     url = `${url[0]}/${html}`;
     return (url);
 }
