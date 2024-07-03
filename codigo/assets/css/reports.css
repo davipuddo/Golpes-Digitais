@@ -168,4 +168,9 @@ div.reportBTN
     {
         height: fit-content !important;
     }
+
+    #formularioDenuncia 
+    {
+        transform: translate(-18vw, 2%);
+    }
 }
