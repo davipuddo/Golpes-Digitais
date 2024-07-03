@@ -13,23 +13,31 @@ var CardsReady = false;
 
 // Ir para homepage
 logo.addEventListener("click", function(){
-    window.location.href = "index.html";
+    window.location.href = changeURL('index.html');
 })
 
 // Ir para o editor de texto
 Editor.addEventListener("click", function(){
-    window.location.href = "TextEditor.html";
+    window.location.href = changeURL('index.html');
     });
 
 // Ir para a pagina sobre
 About.addEventListener("click", function(){
-    window.location.href = "About.html";
+    window.location.href = changeURL('index.html');
 })
 
 // Ir para denuncias
 reports.addEventListener('click', function(){
-    window.location.href = "Report.html"
+    window.location.href = changeURL('index.html');
 })
+
+// Mudar a url de forma mais ampla
+function changeURL (html) {
+    let url = window.location.href;
+    url = url.split('codigo/');
+    url = url[0] + 'codigo/' + html;
+    return (url);
+}
 
 // Ler dados do json
 var LocalJson = {};
