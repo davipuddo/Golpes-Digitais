@@ -263,7 +263,8 @@ function ReadFAQ () {
                               <div class="faq-answer">
                                 <p>${faq.answer}</p>
                               </div>
-                            </div>`
+                            </div>
+                            <hr style="height: 3px; background-color: blue; border-radius: 20px;">`
     }
   }
   FAQButons();  // Definir botoes novos
