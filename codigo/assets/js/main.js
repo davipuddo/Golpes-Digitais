@@ -120,7 +120,7 @@ if (CardsReady)
             Docs[i].addEventListener("click", function(){
                 
                 // Criar link para a pagina
-                let link = window.location.origin + '/codigo/document.html';
+                let link = changeURL('document.html');
                 let url = new URL(link);
                 url.searchParams.append('N', i);
                 window.location.href = url.toString();
