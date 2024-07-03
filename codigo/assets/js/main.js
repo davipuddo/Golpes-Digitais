@@ -112,7 +112,16 @@ if (localStorage.getItem('db'))
 }
 else
 {
-    setTimeout(Cards, 1000);
+    setTimeout(function() {
+        if (localStorage.getItem('db'))
+        {
+            Cards();  
+        }
+        else
+        {
+            console.error("Dados do LocalStorage nao carregados!");
+        }
+    }, 1000);
 }
 
 if (CardsReady)
