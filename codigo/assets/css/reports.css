@@ -101,10 +101,13 @@ div.denuncia
 
 div.denuncia button
 {
-    position: absolute;
-    right: 0;
-    bottom: 0;
     margin: 15px;
+}
+
+div.reportBTN
+{
+    justify-content: right;
+    display: flex;
 }
 
 @media screen and (max-width:600px)
@@ -115,10 +118,54 @@ div.denuncia button
     }
 }
 
-@media screen and (max-width:500px) 
+/* Media Queries */
+@media screen and (max-width:550px)
 {
-    #formularioDenuncia p
+    h1
+    {
+        font-size: 34px;
+    }
+
+    h2
+    {
+        font-size: 26px;
+    }
+
+    h4
+    {
+        font-size: 20px;
+    }
+
+    p, strong, span
+    {
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width:450px)
+{
+    h1
+    {
+        font-size: 30px;
+    }
+
+    h2
+    {
+        font-size: 24px;
+    }
+
+    h4
     {
         font-size: 18px;
-    }    
+    }
+
+    strong
+    {
+        font-size: 18px;
+    }
+
+    button
+    {
+        height: fit-content !important;
+    }
 }

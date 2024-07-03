@@ -157,11 +157,6 @@ function MediaQueries(){
     MyChart.options.legend.labels.boxWidth = 6;
     MyChart.options.legend.labels.padding = 8;
     ix = 3;
-
-     // Outros media queries 
-     let wi = window.screen.width/100;
-     let res = parseInt(110 + (1000/(wi)));
-     databox.style.height = res +'px';
   }
   else if (window.matchMedia("(max-width:420px)").matches)
   {
@@ -171,11 +166,6 @@ function MediaQueries(){
     MyChart.options.legend.labels.boxWidth = 10;
     MyChart.options.legend.labels.padding = 10;
     ix = 2;
-
-    // Outros media queries 
-    let wi = window.screen.width/100;
-    let res = parseInt(110 + (1000/(wi)));
-    databox.style.height = res +'px';
   }
   else if (window.matchMedia("(max-width:500px)").matches)
   {

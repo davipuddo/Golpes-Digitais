@@ -41,16 +41,27 @@ function carregarDenuncias() {
 function adicionarDenunciaNaPagina(nome, data, descricao) {
     const novaDenuncia = document.createElement('div');
     novaDenuncia.classList.add('denuncia');
-    novaDenuncia.innerHTML = `<div><strong>Nome:</strong> <span class="nome">${nome}</span><br>
-                              <strong>Data:</strong> <span class="data">${data}</span><br>
-                              <strong>Descrição:</strong> <span class="descricao">${descricao}</span></div>
-                              <div><button class="deletarDenuncia">Deletar</button></div>`;
+    novaDenuncia.innerHTML = `<div>
+                                <strong>Nome:</strong> 
+                                <span class="nome">${nome}</span>
+                                <br>
+                                <strong>Data:</strong> 
+                                <span class="data">${data}</span><br>
+                                <strong>Descrição:</strong> 
+                                <span class="descricao">${descricao}</span>
+                              </div>
+                              <div  class="reportBTN">
+                                <button class="deletarDenuncia">Deletar</button>
+                              </div>`
+                              
     novaDenuncia.style.borderRadius = "12px";
     novaDenuncia.style.margin = "12px 0";
-    novaDenuncia.style.display = "flex";
+    novaDenuncia.style.display = "block";
     novaDenuncia.style.justifyContent = "space-between";
+
     const del = novaDenuncia.querySelector('.deletarDenuncia');
     del.style.marginTop = "5px";
+
     novaDenuncia.querySelector('.deletarDenuncia').addEventListener('click', function() {
         novaDenuncia.remove();
         salvarDenuncias();
@@ -101,3 +112,13 @@ document.getElementById('botaoCancelar').addEventListener('click', function () {
 
 // Carrega as denúncias ao carregar a página
 window.onload = carregarDenuncias;
+
+setInterval(MediaQueries, 100);
+
+function MediaQueries () {
+
+    if (window.matchMedia('(max-width:450px)').matches)
+    {
+            console.log(1);
+    }
+}

@@ -7,6 +7,8 @@ nav
 
 #page
 {
+    text-align: start;
+    margin: 0px 30px;
     display: flex;
     flex-wrap: nowrap;
     gap: 0px;
@@ -38,7 +40,7 @@ nav button#back
     scrollbar-width: none;
     width: 85vw;
     height: 100%;
-    padding: 2px 16px;
+    padding: 2px 16px 2px 30px;
     white-space: pre-wrap;
     border-radius: 8px 8px 0px 0px;
     background-color: white;

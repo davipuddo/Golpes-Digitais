@@ -282,6 +282,7 @@ a#zap
 
     #data section
     {
+        height: fit-content !important;
         width: 86vw;
     }
 
