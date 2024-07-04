@@ -209,7 +209,8 @@ div#cardbox
 div.card
 {
     width: 20vw;
-    height: calc(25vh + 50px);
+    height: fit-content !important;
+    min-height: 40vh;
     display: flex;
     flex-wrap: wrap;
     overflow-wrap: break-word;
